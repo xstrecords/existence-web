@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            existence - Shop
+        </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" sizes="32x32" href="xst_icon_default.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="xst_icon_small.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="xst_icon_ios.png">
+    </head>
+
+    <body class="no-scroll-page">
+        <header class="header">
+            <div class="container header-inner">
+                <a href="index.html" class="logo">
+                    <img src="xst2025_logo_main.png" alt="existence logo">
+                </a>
+
+                <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <nav class="nav" id="site-nav">
+                    <a class="nav-link" href="index.html">Timeline</a>
+                    <a class="nav-link" href="disco.html">Diskografie</a>
+                    <a class="nav-link" href="shop.html" aria-current="page">Shop</a>
+                    <a href="news.html" class="btn">Newsletter</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="page-full no-scroll" style="background: #232323;">
+            <section class="wip_shop">
+                <div class="container">
+                    <p class="center-text">
+                        Shop kde bude možný koupit merch, zatím připravujeme.
+                    </p>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="footer">
+            <div class="container footer-inner">
+                <img src="logo_footer.png" alt="existence Logo Footer">
+            </div>
+        </footer>
+    
+        <script>
+        (function () {
+            const btn = document.querySelector('.nav-toggle');
+            const nav = document.getElementById('site-nav');
+            if (!btn || !nav) return;
+
+            function closeMenu() {
+                nav.classList.remove('open');
+                btn.setAttribute('aria-expanded', 'false');
+            }
+
+            btn.addEventListener('click', () => {
+                const isOpen = nav.classList.toggle('open');
+                btn.classList.toggle('open', isOpen);
+                btn.setAttribute('aria-expanded', String(isOpen));
+            });
+
+            nav.querySelectorAll('a').forEach(a => {
+                a.addEventListener('click', closeMenu);
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') closeMenu();
+            });
+        })();
+        </script>
+
+    </body>
