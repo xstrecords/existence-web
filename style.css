@@ -227,6 +227,8 @@ body {
 .show-img {
   position: relative;
   overflow: hidden;
+  background: #232323;
+  isolation: isolate;
 }
 
 .show-img img {
@@ -234,6 +236,8 @@ body {
   height: auto;
   object-position: center top;
   display: block;
+  position: relative;
+  z-index: 0;
 }
 
 .show-img-fade {
@@ -244,6 +248,8 @@ body {
   height: 40%;
   pointer-events: none;
   background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, #232323 100%);
+  z-index: 1;
+  transform: translateZ(0);
 }
 
 /*TIMELINE CONTENT*/
