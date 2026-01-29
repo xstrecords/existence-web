@@ -745,31 +745,6 @@ body.no-scroll-page main {
     padding: 0;
   }
 
-  .page-title {margin-top: 100px;
-  }
-
-  .item-meta {margin-bottom: 50px;
-  }
-
-  .item-body p {font-weight: 600; 
-  }
-
-  .timeline {
-    padding: 0; 
-  }
-
-  .timeline-line-vert { 
-    height: 160px; 
-    margin-top: 15px; 
-    margin-bottom: 15px; 
-  }
-
-  .timeline-line-hor { 
-    width: 320px; 
-    margin-top: 100px; 
-    margin-bottom: 100px; 
-  }
-
   .video-card { 
     padding: 18px; 
     margin-bottom: 50px; 
