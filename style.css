@@ -558,19 +558,14 @@ body.no-scroll-page main {
 
 .modal-content {
   background: #111;
-  padding: 20px;
   border-radius: 16px;
-  max-width: 420px;
   width: 90%;
-  max-height: 85vh;
   overflow: auto;
   text-align: center;
 }
 
 .modal-cover {
-  width: 100%;
   border-radius: 12px;
-  margin-bottom: 16px;
 }
 
 .modal-title {
@@ -596,7 +591,7 @@ body.no-scroll-page main {
   right: 16px;
   background: none;
   border: 0;
-  font-size: 24px;
+  font-size: 30px;
   color: #fff;
   cursor: pointer;
 }
@@ -611,8 +606,6 @@ body.no-scroll-page main {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  gap: 12px;
 
   padding: 14px 18px;
   border-radius: 12px;
@@ -644,11 +637,6 @@ body.no-scroll-page main {
   margin-right: auto;
 }
 
-.modal-content {
-  max-height: 85vh;
-  overflow: auto;
-}
-
 /* FOOTER */
 .footer {
   height: 60px;
@@ -678,7 +666,7 @@ body.no-scroll-page main {
   }
 
   .modal-cover {
-    max-height: 36vh;
+    max-height: 34vh;
     width: 100%;
     object-fit: cover;
     margin-bottom: 12px;
