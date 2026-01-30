@@ -222,10 +222,11 @@ body.modal-open {
   color: rgb(0, 0, 0);
   border-radius: 6px;
   font-weight: 500;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-.nav .btn:hover {
+.nav .btn:hover,
+.nav .btn:active {
   background-color: rgb(184, 184, 184);
   color: rgb(0, 0, 0);
 }
@@ -236,10 +237,11 @@ body.modal-open {
   color: rgb(0, 0, 0);
   border-radius: 6px;
   font-weight: 500;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-.nav .btn-page:hover {
+.nav .btn-page:hover,
+.nav .btn-page:active {
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
 }
@@ -669,7 +671,7 @@ body.no-scroll-page main {
     max-height: 34vh;
     width: 100%;
     object-fit: cover;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
   }
 
   .modal-title {
@@ -798,6 +800,10 @@ body.no-scroll-page main {
     max-width: 360px; 
     max-height: none; 
     overflow: visible; 
+  }
+
+  .modal_cover {
+    margin-bottom: 10px;
   }
 
   .modal-title {
