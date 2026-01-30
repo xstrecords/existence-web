@@ -230,7 +230,7 @@ body {
 }
 .btn-page:hover {
   background-color: rgb(184, 184, 184);
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
 
 /*HOME IMAGE */
