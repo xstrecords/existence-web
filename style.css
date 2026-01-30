@@ -584,6 +584,7 @@ body.no-scroll-page main {
   max-height: 60vh;
   object-fit: cover;
   border-radius: 12px;
+  margin-bottom: 10px;
 }
 
 .modal-title {
