@@ -665,10 +665,6 @@ body.no-scroll-page main {
 /* DESKTOP */
 @media (min-width: 1024px) {
 
-  .container { 
-    padding: 24px; 
-  }
-
   .nav {
     position: static;
     top: auto;
