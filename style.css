@@ -42,10 +42,12 @@ body.modal-open {
 body.modal-open {
   position: fixed;
   width: 100%;
+  height: 100vh;
   left: 0;
   right: 0;
   touch-action: none;
   overscroll-behavior: none;
+  overflow: hidden;
 }
 
 .container {
@@ -220,7 +222,7 @@ body.modal-open {
   color: rgb(0, 0, 0);
   border-radius: 6px;
   font-weight: 500;
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .nav .btn:hover {
@@ -234,7 +236,7 @@ body.modal-open {
   color: rgb(0, 0, 0);
   border-radius: 6px;
   font-weight: 500;
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .nav .btn-page:hover {
@@ -276,7 +278,9 @@ body.modal-open {
   border: 0;
 }
 
-.section-stub { scroll-margin-top: calc(var(--header-h) + 18px); }
+.section-stub {
+  scroll-margin-top: calc(var(--header-h) + 18px);
+}
 
 .timeline-inner {
   display: flex;
@@ -428,8 +432,11 @@ body.no-scroll-page main {
 }
 
 /* YOUTUBE LAZY PLACEHOLDER */
-.video-frame.yt-lazy { position: relative; }
-.video-frame .yt-placeholder{
+.video-frame.yt-lazy {
+  position: relative;
+}
+
+.video-frame .yt-placeholder {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -442,13 +449,15 @@ body.no-scroll-page main {
   background-position: center;
   background-repeat: no-repeat;
 }
-.video-frame .yt-placeholder::after{
+
+.video-frame .yt-placeholder::after {
   content:"";
   position:absolute;
   inset:0;
   background: linear-gradient(to bottom, rgba(0,0,0,0.20), rgba(0,0,0,0.45));
 }
-.video-frame .yt-play{
+
+.video-frame .yt-play {
   position:absolute;
   left:50%;
   top:50%;
@@ -459,7 +468,8 @@ body.no-scroll-page main {
   background: rgba(255,255,255,0.85);
   z-index: 1;
 }
-.video-frame .yt-play::before{
+
+.video-frame .yt-play::before {
   content:"";
   position:absolute;
   left: 50%;
@@ -567,6 +577,10 @@ body.no-scroll-page main {
 }
 
 .modal-cover {
+  width: 100%;
+  display: block;
+  max-height: 60vh;
+  object-fit: cover;
   border-radius: 12px;
 }
 
@@ -589,8 +603,8 @@ body.no-scroll-page main {
 
 .modal-close {
   position: absolute;
-  top: 16px;
-  right: 16px;
+  top: 12px;
+  right: 12px;
   background: none;
   border: 0;
   font-size: 30px;
@@ -608,14 +622,11 @@ body.no-scroll-page main {
   display: flex;
   align-items: center;
   justify-content: center;
-
   padding: 14px 18px;
   border-radius: 12px;
-
   background: #1f1f1f;
   color: #fff;
   text-decoration: none;
-
   font-weight: 600;
   font-size: 1px rgba(0,0,0,0.45);
 }
@@ -641,6 +652,12 @@ body.no-scroll-page main {
 
 /* DISCOGRAPHY MODAL MOBILE VIEWPORT */
 @media (max-width: 1023px) {
+
+  body.modal-open {
+    position: fixed;
+    width: 100%;
+  }
+
   .modal-content {
     max-width: 320px;
     padding: 16px;
@@ -652,7 +669,7 @@ body.no-scroll-page main {
     max-height: 34vh;
     width: 100%;
     object-fit: cover;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
 
   .modal-title {
@@ -725,11 +742,11 @@ body.no-scroll-page main {
     color: rgb(0,0,0);
   }
 
-  .nav-toggle { 
+  .nav-toggle {
     display: none; 
   }
 
-  #site-nav{
+  #site-nav {
     position: static;
     inset: auto;
     background: transparent;
@@ -741,44 +758,49 @@ body.no-scroll-page main {
     pointer-events: auto;
   }
 
-  #site-nav a{
+  #site-nav a {
     opacity: 1;
     transform: none;
     padding: 0;
   }
 
-  .video-card { 
+  .video-card {
     padding: 18px; 
     margin-bottom: 50px; 
   }
 
-  .show-poster img { 
+  .show-poster img {
     width: 33%; 
     height: 33%; 
   }
 
-  .discography { 
+  .discography {
     padding: 80px 0; 
   }
 
-  .discography-grid { 
+  .discography-grid {
     grid-template-columns: repeat(auto-fill, minmax(120px, 120px)); 
     gap: 20px; 
   }
 
-  .discography-item { 
+  .discography-item {
     width: 120px; 
     height: 120px; 
   }
 
-  .modal-content { 
+  body.modal-open {
+    overflow: hidden;
+    height: 100vh;
+  }
+
+  .modal-content {
     padding: 28px; 
     max-width: 360px; 
     max-height: none; 
     overflow: visible; 
   }
 
-  .modal-title { 
+  .modal-title {
     line-height: 0.1; 
   }
 }
