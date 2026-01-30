@@ -502,6 +502,27 @@
         </footer>
 
         <script>
+
+        let __scrollY = 0;
+
+        function lockPageScroll() {
+            __scrollY = window.scrollY || 0;
+            document.documentElement.classList.add('modal-open');
+            document.body.classList.add('modal-open');
+            document.body.style.top = `-${__scrollY}px`;
+        }
+
+        function unlockPageScroll() {
+            document.documentElement.classList.remove('modal-open');
+            document.body.classList.remove('modal-open');
+            document.body.style.top = '';
+            window.scrollTo(0, __scrollY);
+        }
+
+        function preventTouchScroll(e) {
+            if (document.body.classList.contains('modal-open')) e.preventDefault();
+        }
+        document.addEventListener('touchmove', preventTouchScroll, { passive: false });
         const releases = document.querySelectorAll('.discography-item');
 
         const modal = document.getElementById('releaseModal');
@@ -542,11 +563,13 @@
 
             modal.classList.add('active');
             document.body.classList.add('modal-open');
+            lockPageScroll();
         }
 
         function closeModal() {
             modal.classList.remove('active');
             document.body.classList.remove('modal-open');
+            unlockPageScroll();
         }
 
         releases.forEach(item => {
@@ -590,3 +613,4 @@
         })();
         </script>
     </body>
+</html>

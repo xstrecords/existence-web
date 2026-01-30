@@ -33,9 +33,19 @@ body {
   overflow-x: hidden;
 }
 
+html.modal-open,
 body.modal-open {
   overflow: hidden;
   height: 100vh;
+}
+
+body.modal-open {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  right: 0;
+  touch-action: none;
+  overscroll-behavior: none;
 }
 
 .container {
