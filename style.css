@@ -209,7 +209,7 @@ body {
   transition: all 0.3s ease;
 }
 
-.btn:hover {
+.nav .btn:hover {
   background-color: rgb(184, 184, 184);
   color: rgb(0, 0, 0);
 }
@@ -228,7 +228,8 @@ body {
   width: 100%;
   text-align: center;
 }
-.btn-page:hover {
+
+.nav .btn-page:hover {
   background-color: rgb(184, 184, 184);
   color: rgb(0, 0, 0);
 }
