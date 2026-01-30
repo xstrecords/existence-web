@@ -33,6 +33,11 @@ body {
   overflow-x: hidden;
 }
 
+body.modal-open {
+  overflow: hidden;
+  height: 100vh;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -661,6 +666,24 @@ body.no-scroll-page main {
 .footer img {
   height: 30px;
   display: block;
+}
+
+/* DISCOGRAPHY MODAL MOBILE VIEWPORT */
+@media (max-width: 1023px) {
+  .modal-content {
+    max-width: 320px;
+    padding: 16px;
+    max-height: 80vh;
+  }
+
+  .modal-links {
+    gap: 10px;
+  }
+
+  .modal-link {
+    padding: 12px 14px;
+    font-size: 0.95rem;
+  }
 }
 
 /* DESKTOP */
