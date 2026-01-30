@@ -678,7 +678,7 @@ body.no-scroll-page main {
   }
 
   .modal-cover {
-    max-height: 42vh;
+    max-height: 40vh;
     width: 100%;
     object-fit: cover;
     margin-bottom: 12px;
