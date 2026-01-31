@@ -17,16 +17,6 @@
   box-sizing: border-box;
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
-  scrollbar-gutter: stable;
-}
-
-html {
-  overflow-y: scroll;
-}
-
 body {
   margin: 0;
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
@@ -34,6 +24,11 @@ body {
   color: var(--text);
   background: var(--bg);
   overflow-x: hidden;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
 }
 
 html.modal-open,
