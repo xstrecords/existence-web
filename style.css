@@ -37,6 +37,10 @@ body.modal-open {
   height: 100vh;
 }
 
+html.modal-open {
+  scrollbar-gutter: stable;
+}
+
 body.modal-open {
   position: fixed;
   width: 100%;
