@@ -35,7 +35,10 @@ html.modal-open,
 body.modal-open {
   overflow: hidden;
   height: 100vh;
-    scrollbar-gutter: stable;
+}
+
+html.modal-open {
+  scrollbar-gutter: stable;
 }
 
 body.modal-open {
