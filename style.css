@@ -575,6 +575,7 @@ body.no-scroll-page main {
 }
 
 .modal.active {
+  display: flex;
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
