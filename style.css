@@ -709,6 +709,11 @@ body.modal-open {
     padding: 10px 14px;
     font-size: 0.95rem;
   }
+
+  .modal-close {
+    top: 8px;
+    right: 8px;
+  }
 }
 
 /* DESKTOP */
