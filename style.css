@@ -611,22 +611,6 @@ body.no-scroll-page main {
   color: #fff;
 }
 
-body.modal-open {
-  overflow: hidden;
-  height: 100vh;
-}
-
-.modal-close {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  background: none;
-  border: 0;
-  font-size: 26px;
-  color: #fff;
-  cursor: pointer;
-}
-
 .modal-links {
   display: flex;
   flex-direction: column;
@@ -644,6 +628,22 @@ body.modal-open {
   text-decoration: none;
   font-weight: 600;
   font-size: 1px rgba(0,0,0,0.45);
+}
+
+body.modal-open {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.modal-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: none;
+  border: 0;
+  font-size: 26px;
+  color: #fff;
+  cursor: pointer;
 }
 
 /* FOOTER */
@@ -689,10 +689,6 @@ body.modal-open {
     max-height: 34vh;
     width: 100%;
     object-fit: cover;
-  }
-
-  .modal-title {
-    gap: 0 0 4px;
   }
 
   .modal-links {
