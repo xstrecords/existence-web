@@ -568,18 +568,10 @@ body.no-scroll-page main {
   align-items: center;
   justify-content: center;
   z-index: 2000;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: opacity 220ms ease, visibility 0s linear 220ms;
 }
 
 .modal.active {
   display: flex;
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  transition: opacity 220ms ease;
 }
 
 .modal-content {
@@ -588,14 +580,6 @@ body.no-scroll-page main {
   width: 90%;
   overflow: auto;
   text-align: center;
-  transform: translateY(8px) scale(0.98);
-  opacity: 0;
-  transition: transform 220ms ease, opacity 220ms ease;
-}
-
-.modal.active .modal-content {
-  transform: translateY(0) scale(1);
-  opacity: 1;
 }
 
 .modal-cover {
