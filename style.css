@@ -23,6 +23,10 @@ html, body {
   scrollbar-gutter: stable;
 }
 
+html {
+  overflow-y: scroll;
+}
+
 body {
   margin: 0;
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
@@ -44,7 +48,6 @@ body.modal-open {
   height: 100vh;
   left: 0;
   right: 0;
-  padding-right: calc(100vw - 100%);
   touch-action: none;
   overscroll-behavior: none;
 }
@@ -670,6 +673,11 @@ body.modal-open {
   body.modal-open {
     position: fixed;
     width: 100%;
+    height: 100vh;
+    left: 0;
+    right: 0;
+    touch-action: none;
+    overscroll-behavior: none;
   }
 
   .modal-content {
