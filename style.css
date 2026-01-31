@@ -593,6 +593,7 @@ body.no-scroll-page main {
 }
 
 .modal-title {
+  margin-top: 16px;
   margin-bottom: 4px;
   line-height: 1.0;
 }
