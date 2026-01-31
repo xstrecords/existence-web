@@ -524,7 +524,6 @@
         }
         document.addEventListener('touchmove', preventTouchScroll, { passive: false });
         const releases = document.querySelectorAll('.discography-item');
-
         const modal = document.getElementById('releaseModal');
         const titleEl = modal.querySelector('.modal-title');
         const coverEl = modal.querySelector('.modal-cover');
@@ -538,6 +537,26 @@
             { key: 'youtube',    label: 'YouTube',     icon: ''  },
             { key: 'soundcloud', label: 'SoundCloud',  icon: ''  }
         ];
+
+        let savedScrollY = 0;
+
+        function lockScroll() {
+            savedScrollY = window.scrollY || document.documentElement.scrollTop || 0;
+            document.body.style.position = 'fixed';
+            document.body.style.top = `-${savedScrollY}px`;
+            document.body.style.left = '0';
+            document.body.style.right = '0';
+            document.body.style.width = '100%';
+        }
+
+        function unlockScroll() {
+            document.body.style.position = '';
+            document.body.style.top = '';
+            document.body.style.left = '';
+            document.body.style.right = '';
+            document.body.style.width = '';
+            indow.scrollTo(0, savedScrollY);
+        }
 
         function openModal(item) {
             titleEl.textContent = item.dataset.title || '';
@@ -563,6 +582,7 @@
 
             modal.classList.add('active');
             document.body.classList.add('modal-open');
+            unlockScroll();
             lockPageScroll();
         }
 
