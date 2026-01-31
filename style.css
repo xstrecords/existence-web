@@ -31,14 +31,10 @@ html, body {
   padding: 0;
 }
 
-html.modal-open,
-body.modal-open {
-  overflow: hidden;
-  height: 100vh;
-}
-
 html.modal-open {
+  height: 100vh;
   scrollbar-gutter: stable;
+  overflow: hidden;
 }
 
 body.modal-open {
@@ -49,6 +45,7 @@ body.modal-open {
   right: 0;
   touch-action: none;
   overscroll-behavior: none;
+  overflow: hidden;
 }
 
 .container {
