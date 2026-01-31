@@ -155,7 +155,7 @@ body.modal-open {
   transform: translateY(0);
 }
 
-#site-nav a.btn-page {
+#site-nav .btn-page {
   transition: 
     opacity 0.25s ease,
     transform 0.25s ease
