@@ -824,8 +824,4 @@ body.modal-open {
   .modal_cover {
     margin-bottom: 10px;
   }
-
-  .modal-title {
-    line-height: 0.1;
-  }
 }
