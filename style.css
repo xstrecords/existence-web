@@ -44,7 +44,7 @@ body.modal-open {
   height: 100vh;
   left: 0;
   right: 0;
-  padding-right: 0 !important;
+  padding-right: calc(100vw - 100%);
   touch-action: none;
   overscroll-behavior: none;
 }
@@ -147,20 +147,14 @@ body.modal-open {
   transform: translateY(-6px);
   transition:
     opacity 0.25s ease,
-    transform 0.25s ease;
+    transform 0.25s ease
+    background-color 0.3s ease
+    color 0.3s ease;
 }
 
 #site-nav.open a{
   opacity: 1;
   transform: translateY(0);
-}
-
-#site-nav .btn-page {
-  transition: 
-    opacity 0.25s ease,
-    transform 0.25s ease
-    background-color 0.3s ease
-    color 0.3s ease;
 }
 
 /* HEADER - NAV */
