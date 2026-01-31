@@ -584,6 +584,7 @@ body.no-scroll-page main {
 
 .modal-cover {
   width: 100%;
+  height: 100%;
   display: block;
   max-height: 60vh;
   object-fit: cover;
@@ -626,11 +627,6 @@ body.no-scroll-page main {
   font-size: 1px rgba(0,0,0,0.45);
 }
 
-body.modal-open {
-  overflow: hidden;
-  height: 100vh;
-}
-
 .modal-close {
   position: absolute;
   top: 8px;
@@ -667,7 +663,6 @@ body.modal-open {
   body.modal-open {
     position: fixed;
     width: 100%;
-    height: 100vh;
     left: 0;
     right: 0;
     touch-action: none;
@@ -684,6 +679,7 @@ body.modal-open {
   .modal-cover {
     max-height: 34vh;
     width: 100%;
+    height: 100%;
     object-fit: cover;
   }
 
@@ -692,7 +688,7 @@ body.modal-open {
   }
 
   .modal-link {
-    padding: 10px 14px;
+    padding: 8px 14px;
     font-size: 0.95rem;
   }
 }
