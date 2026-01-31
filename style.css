@@ -611,11 +611,11 @@ body.modal-open {
 
 .modal-close {
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: 16px;
+  right: 16px;
   background: none;
   border: 0;
-  font-size: 30px;
+  font-size: 24px;
   color: #fff;
   cursor: pointer;
 }
