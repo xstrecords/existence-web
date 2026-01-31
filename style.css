@@ -597,7 +597,6 @@ body.no-scroll-page main {
 
 .modal-title {
   margin-bottom: 4px;
-  line-height: 1.2;
 }
 
 .modal-artist {
@@ -619,11 +618,11 @@ body.modal-open {
 
 .modal-close {
   position: absolute;
-  top: 16px;
-  right: 16px;
+  top: 8px;
+  right: 8px;
   background: none;
   border: 0;
-  font-size: 24px;
+  font-size: 26px;
   color: #fff;
   cursor: pointer;
 }
@@ -690,7 +689,6 @@ body.modal-open {
     max-height: 34vh;
     width: 100%;
     object-fit: cover;
-    margin-bottom: 10px;
   }
 
   .modal-title {
@@ -704,11 +702,6 @@ body.modal-open {
   .modal-link {
     padding: 10px 14px;
     font-size: 0.95rem;
-  }
-
-  .modal-close {
-    top: 8px;
-    right: 8px;
   }
 }
 
@@ -815,9 +808,5 @@ body.modal-open {
     max-width: 360px; 
     max-height: none; 
     overflow: visible; 
-  }
-
-  .modal_cover {
-    margin-bottom: 10px;
   }
 }
