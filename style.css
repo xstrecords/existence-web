@@ -568,15 +568,10 @@ body.no-scroll-page main {
   align-items: center;
   justify-content: center;
   z-index: 2000;
-  pointer-events: none;
-  opacity: 0;
-  visibility: hidden;
 }
 
 .modal.active {
   display: flex;
-  opacity: 1;
-  visibility: visible;
 }
 
 .modal-content {
