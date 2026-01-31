@@ -812,6 +812,7 @@ body.modal-open {
   }
 
   .modal-title {
-    line-height: 0.1; 
+    margin-top: 10px;
+    line-height: 0.1;
   }
 }
