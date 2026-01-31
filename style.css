@@ -223,7 +223,8 @@ body.modal-open {
   font-weight: 500;
   transition: 
     background-color 0.3s ease,
-    color 0.3s ease;
+    color 0.3s ease,
+    transform 0.3s ease;
 }
 
 .nav .btn:hover,
@@ -240,7 +241,8 @@ body.modal-open {
   font-weight: 500;
   transition:
     background-color 0.3s ease,
-    color 0.3s ease;
+    color 0.3s ease,
+    transform 0.3s ease;
 }
 
 .nav .btn-page:hover,
@@ -536,7 +538,6 @@ body.no-scroll-page main {
 
 .discography-item {
   width: 100%;
-  aspect-ratio: 1 / 1;
   aspect-ratio: 1 / 1;
   border-radius: 12px;
   display: block;
