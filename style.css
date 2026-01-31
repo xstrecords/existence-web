@@ -594,11 +594,13 @@ body.no-scroll-page main {
 
 .modal-title {
   margin-bottom: 4px;
+  line-height: 1.0;
 }
 
 .modal-artist {
   color: var(--muted);
   margin-bottom: 16px;
+  line-height: 1.0;
 }
 
 .modal-links a {
