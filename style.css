@@ -585,7 +585,7 @@ body.no-scroll-page main {
 
 .modal-cover {
   width: 100%;
-  height: 100%;
+  aspect-ratio: 1 / 1;
   display: block;
   max-height: 60vh;
   object-fit: cover;
@@ -688,9 +688,6 @@ body.no-scroll-page main {
 
   .modal-cover {
     max-height: 34vh;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
   }
 
   .modal-links {
