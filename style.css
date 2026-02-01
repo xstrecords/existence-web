@@ -687,7 +687,17 @@ body.no-scroll-page main {
   }
 
   .modal-cover {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
     max-height: 34vh;
+  }
+
+  .modal-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
   }
 
   .modal-links {
