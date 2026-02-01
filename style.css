@@ -17,8 +17,9 @@
   box-sizing: border-box;
 }
 
-html {
-  scrollbar-gutter: stable;
+html, body {
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -30,14 +31,13 @@ body {
   overflow-x: hidden;
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
-}
-
 html.modal-open {
   height: 100vh;
   scrollbar-gutter: stable;
+  overflow: hidden;
+}
+
+body.page-full {
   overflow: hidden;
 }
 
@@ -567,7 +567,7 @@ body.no-scroll-page main {
 .modal {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.75);
+  background: rgba(0, 0, 0, 0.815);
   display: none;
   align-items: center;
   justify-content: center;

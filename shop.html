@@ -63,6 +63,7 @@
         </footer>
     
         <script>
+
         (function () {
             const btn = document.querySelector('.nav-toggle');
             const nav = document.getElementById('site-nav');
@@ -87,6 +88,12 @@
                 if (e.key === 'Escape') closeMenu();
             });
         })();
+
+        (function setScrollbarWidthVar(){
+            const sbw = window.innerWidth - document.documentElement.clientWidth;
+            document.documentElement.style.setProperty('--sbw', sbw + 'px');
+        })();
+
         </script>
 
     </body>

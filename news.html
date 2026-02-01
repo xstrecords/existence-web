@@ -183,6 +183,7 @@
         <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
 
         <script>
+        
         (function () {
             const btn = document.querySelector('.nav-toggle');
             const nav = document.getElementById('site-nav');
@@ -219,7 +220,13 @@
             }
             };
 
+        (function setScrollbarWidthVar(){
+            const sbw = window.innerWidth - document.documentElement.clientWidth;
+            document.documentElement.style.setProperty('--sbw', sbw + 'px');
+        })();
+
             var AUTOHIDE = Boolean(0);
+        
         </script>
     </body>
 </html>
