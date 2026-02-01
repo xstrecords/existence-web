@@ -37,11 +37,6 @@ html.modal-open {
   overflow: hidden;
 }
 
-body.no-scroll-page {
-  overflow: hidden;
-  padding-right: var(--sbw, 0px);
-}
-
 body.modal-open {
   position: fixed;
   width: 100%;
@@ -435,6 +430,7 @@ body.no-scroll-page {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  padding-right: var(--sbw, 0px);
 }
 
 body.no-scroll-page main {
