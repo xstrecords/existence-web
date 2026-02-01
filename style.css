@@ -24,7 +24,7 @@ html, body {
 
 html {
   scrollbar-gutter: stable;
-  background: #111;
+  background: #232323;
 }
 
 body {
@@ -34,7 +34,7 @@ body {
   color: var(--text);
   background: var(--bg);
   overflow-x: hidden;
-  background: #111;
+  background: #232323;
 }
 
 html.modal-open {
