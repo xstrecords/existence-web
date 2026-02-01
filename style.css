@@ -22,6 +22,11 @@ html, body {
   padding: 0;
 }
 
+html {
+  scrollbar-gutter: stable;
+  background: #111;
+}
+
 body {
   margin: 0;
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
@@ -29,6 +34,7 @@ body {
   color: var(--text);
   background: var(--bg);
   overflow-x: hidden;
+  background: #111;
 }
 
 html.modal-open {
