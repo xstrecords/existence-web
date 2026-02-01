@@ -37,7 +37,7 @@ html.modal-open {
   overflow: hidden;
 }
 
-body.page-full {
+body.no-scroll-page {
   overflow: hidden;
   padding-right: var(--sbw, 0px);
 }
@@ -568,7 +568,7 @@ body.no-scroll-page main {
 .modal {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.815);
+  background: rgba(0, 0, 0, 0.850);
   display: none;
   align-items: center;
   justify-content: center;
