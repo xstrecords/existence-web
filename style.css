@@ -39,6 +39,7 @@ html.modal-open {
 
 body.page-full {
   overflow: hidden;
+  padding-right: var(--sbw, 0px);
 }
 
 body.modal-open {
