@@ -431,20 +431,6 @@ body.modal-open {
   justify-content: center;
 }
 
-body.no-scroll-page {
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  padding-right: var(--sbw, 0px);
-}
-
-body.no-scroll-page main {
-  flex: 1;
-  min-height: 0;
-  overflow: hidden;
-}
-
 /* YOUTUBE LAZY PLACEHOLDER */
 .video-frame.yt-lazy {
   position: relative;
