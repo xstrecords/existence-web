@@ -3,6 +3,14 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://xstrecords.cz/">
+        <meta property="og:title" content="existence">
+        <meta property="og:site_name" content="XST Records">
+        <meta property="og:description" content="XST Records">
+        <meta property="og:image" content="https://xstrecords.cz/xst_thumb.jpg">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
         <title>
             existence - Shop
         </title>
@@ -15,11 +23,11 @@
         <link rel="apple-touch-icon" sizes="180x180" href="xst_icon_ios.png">
     </head>
 
-    <body class="no-scroll-page">
+    <body>
         <header class="header">
             <div class="container header-inner">
                 <a href="index.html" class="logo">
-                    <img src="xst2025_logo_main.png" alt="existence logo">
+                    <img src="xst_logo_main.webp" alt="existence logo">
                 </a>
 
                 <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">
@@ -37,11 +45,11 @@
             </div>
         </header>
 
-        <main class="page-full no-scroll" style="background: #232323;">
+        <main class="page-full" style="background: #232323;">
             <section class="wip_shop">
                 <div class="container">
                     <p class="center-text">
-                        Shop kde bude možný koupit merch, zatím připravujeme.
+                        Merch shop zatím připravujeme.
                     </p>
                 </div>
             </section>
@@ -50,11 +58,12 @@
 
         <footer class="footer">
             <div class="container footer-inner">
-                <img src="logo_footer.png" alt="existence Logo Footer">
+                <img src="logo_footer.webp" alt="existence Logo Footer">
             </div>
         </footer>
     
         <script>
+
         (function () {
             const btn = document.querySelector('.nav-toggle');
             const nav = document.getElementById('site-nav');
@@ -79,6 +88,12 @@
                 if (e.key === 'Escape') closeMenu();
             });
         })();
-        </script>
 
+        (function setScrollbarWidthVar(){
+            const sbw = window.innerWidth - document.documentElement.clientWidth;
+            document.documentElement.style.setProperty('--sbw', sbw + 'px');
+        })();
+
+        </script>
     </body>
+</html>
