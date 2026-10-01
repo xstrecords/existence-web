@@ -1,69 +1,523 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="https://xstrecords.cz/">
-        <meta property="og:title" content="existence">
-        <meta property="og:site_name" content="XST Records">
-        <meta property="og:description" content="XST Records">
-        <meta property="og:image" content="https://xstrecords.cz/xst_thumb.jpg">
-        <meta property="og:image:width" content="1200">
-        <meta property="og:image:height" content="630">
-        <title>
-            existence
-        </title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
-        <link rel="icon" type="image/png" sizes="32x32" href="xst_icon_default.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="xst_icon_small.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="xst_icon_ios.png">
-    </head>
 
-    <body>
-        <header class="header">
-            <div class="container header-inner">
-                <a href="index.html" class="logo">
-                    <img src="xst_logo_main.webp" alt="existence logo">
-                </a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://xstrecords.cz/">
+    <meta property="og:title" content="existence">
+    <meta property="og:site_name" content="XST Records">
+    <meta property="og:description" content="XST Records">
+    <meta property="og:image" content="https://xstrecords.cz/xst_thumb.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <title>
+        existence
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="xst_icon_default.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="xst_icon_small.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="xst_icon_ios.png">
+    <style>
+        @font-face {
+            font-display: block;
+            font-family: Roboto;
+            src: url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff")
+        }
 
-                <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+        @font-face {
+            font-display: fallback;
+            font-family: Roboto;
+            font-weight: 600;
+            src: url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff) format("woff")
+        }
 
-                <nav class="nav" id="site-nav">
-                    <a class="nav-link" href="index.html" aria-current="page">Timeline</a>
-                    <a class="nav-link" href="disco.html">Diskografie</a>
-                    <a class="nav-link" href="shop.html">Shop</a>
-                    <a href="news.html" class="btn">Newsletter</a>
-                </nav>
-            </div>
-        </header>
+        @font-face {
+            font-display: fallback;
+            font-family: Roboto;
+            font-weight: 700;
+            src: url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff")
+        }
 
-        <section class="show-img">
-            <img src="krap4.webp" alt="existence show" fetchpriority="high" decoding="async">
-            <div class="show-img-fade"></div>
-        </section>
-        <main class="page-full" style="background: #232323;">
-            <section class="timeline" id="timeline">
-                <div class="container timeline-inner"></div>
-                <article class="timeline-item" id="vzhuru_nohama">
+        #sib-container input:-ms-input-placeholder {
+            text-align: left;
+            font-family: Helvetica, sans-serif;
+            color: #828992;
+        }
+
+        #sib-container input {
+            text-align: left;
+            font-family: Roboto;
+            color: #232323;
+        }
+
+        #sib-container input::placeholder {
+            text-align: left;
+            font-family: Helvetica, sans-serif;
+            color: #828992;
+        }
+
+        #sib-container textarea::placeholder {
+            text-align: left;
+            font-family: Helvetica, sans-serif;
+            color: #828992;
+        }
+
+        #sib-container a {
+            text-decoration: underline;
+            color: #2BB2FC;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="#home" class="logo">
+                <img src="xst_logo_main.webp" alt="existence logo">
+            </a>
+
+            <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav" id="site-nav">
+                <a class="nav-link" href="#home">Nejnovější</a>
+                <a class="nav-link" href="#discography">Diskografie</a>
+                <a class="nav-link" href="#timeline">Timeline</a>
+                <a class="btn" href="#news">Newsletter</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="show-img">
+        <img src="krap4.webp" alt="existence show" fetchpriority="high" decoding="async">
+        <div class="show-img-fade"></div>
+    </section>
+    <main class="page-content" style="background: #232323;">
+
+        <section class="home" id="home">
+            <div class="container">
+                <h1 class="page-title">Poslechni si nejnovější release</h1>
+                <article class="timeline-item" id="lost">
                     <header class="item-head">
-                        <h1 class="page-title">Timeline existence</h1>
-                        <p class="page-subtitle">Established 2018</p>
-                        <div class="timeline-line-vert"></div>
-                        <p class="item-title">Kde to začalo - Vzhůru Nohama</p>
-                        <p class="item-meta">Datum vydání: 20.říjen 2018</p>
+                        <p class="item-title">Lost In The Glow</p>
+                        <p class="item-meta">Datum vydání: 12. prosince 2025</p>
                     </header>
                     <div class="video-card">
                         <div class="video-frame">
-                            <iframe
-                                src="https://www.youtube-nocookie.com/embed/oa42t040kqs"
+                            <iframe src="https://www.youtube-nocookie.com/embed/aAx9fcvMFV4"
+                                title="YouTube - Lost In The Glow"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            </div>
+        </section>
+
+        <section class="discography" id="discography">
+            <div class="container">
+                <div class="discography-intro">
+                    <h1 class="page-title">Celá diskografie XST na streamovacích platformách</h1>
+                </div>
+
+                <div class="discography-section">
+                    <h1 class="discography-title">
+                        Alba/EPs
+                    </h1>
+
+                    <div class="discography-grid grid-small">
+                        <div class="discography-item" data-title="pavučina EP" data-artist="yurkur"
+                            data-date="1. července 2023" data-cover="pavucina_cover.webp"
+                            data-spotify="https://open.spotify.com/album/3XCfQfTPiYkBlEadQGvaj4"
+                            data-apple="https://music.apple.com/cz/album/pavučina-ep/1696594926"
+                            data-youtube="https://www.youtube.com/playlist?list=PLG2uVF0bbGz6ttB6Kv0UDVZ_kWAGsoecy"
+                            data-soundcloud="https://soundcloud.com/xstyurkur/sets/pavucina">
+                            <img src="pavucina_cover.webp" alt="yurkur - pavučina EP">
+                        </div>
+
+                        <div class="discography-item" data-title="Kush + Music EP" data-artist="MukL & yurkur"
+                            data-date="1. července 2022" data-cover="kush_music_cover.webp"
+                            data-spotify="https://open.spotify.com/album/3XE8qSIX9b2s3ApCVCerzF"
+                            data-apple="https://music.apple.com/cz/album/kush-music/1632684404"
+                            data-youtube="https://www.youtube.com/playlist?list=PLG2uVF0bbGz79DRFCdjNLG_yeLc7sQouQ"
+                            data-soundcloud="https://soundcloud.com/xstyurkur/sets/kush-music">
+                            <img src="kush_music_cover.webp" alt="MukL & yurkur - Kush + Music EP">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="discography-section">
+                    <h1 class="discography-title">
+                        Singly
+                    </h1>
+
+                    <div class="discography-grid grid-small">
+                        <div class="discography-item" data-title="Lost In The Glow" data-artist="MukL"
+                            data-date="12. prosince 2025" data-cover="lost_in_the_glow_cover.webp"
+                            data-spotify="https://open.spotify.com/album/56GqIpyyym2K72AS4j8qBm"
+                            data-apple="https://music.apple.com/cz/album/lost-in-the-glow-single/1858393378"
+                            data-youtube="https://www.youtube.com/watch?v=aAx9fcvMFV4" data-soundcloud="">
+                            <img src="lost_in_the_glow_cover.webp" alt="MukL - Lost In The Glow">
+                        </div>
+
+                        <div class="discography-item" data-title="Blessed" data-artist="MukL (feat. yurkur)"
+                            data-date="8. října 2025" data-cover="blessed_cover.webp"
+                            data-spotify="https://open.spotify.com/album/0nM3NNWepAbDEse6sWSmmi"
+                            data-apple="https://music.apple.com/cz/album/blessed-feat-yurkur-single/1843625074"
+                            data-youtube="https://www.youtube.com/watch?v=JcmAiXPeugo" data-soundcloud="">
+                            <img src="blessed_cover.webp" alt="MukL - Blessed (feat. yurkur)">
+                        </div>
+
+                        <div class="discography-item" data-title="hardware" data-artist="yurkur"
+                            data-date="24. září 2025" data-cover="hardware_cover.webp"
+                            data-spotify="https://open.spotify.com/album/3YhgVMrNxDFE94AxlCsVi7"
+                            data-apple="https://music.apple.com/cz/album/hardware-single/1838627364"
+                            data-youtube="https://www.youtube.com/watch?v=yDK_1ZYqtqQ"
+                            data-soundcloud="https://soundcloud.com/xstyurkur/hardware">
+                            <img src="hardware_cover.webp" alt="yurkur - hardware">
+                        </div>
+
+                        <div class="discography-item" data-title="Message" data-artist="MukL" data-date="31. ledna 2025"
+                            data-cover="message_cover.webp"
+                            data-spotify="https://open.spotify.com/album/6MCtWzFLaFXa5KsqqoDdoD"
+                            data-apple="https://music.apple.com/cz/album/message-single/1792169184"
+                            data-youtube="https://www.youtube.com/watch?v=wEMNCGggUcs" data-soundcloud="">
+                            <img src="message_cover.webp" alt="MukL - Message">
+                        </div>
+
+                        <div class="discography-item" data-title="Bronx" data-artist="yurkur"
+                            data-date="28. června 2024" data-cover="bronx_cover.webp"
+                            data-spotify="https://open.spotify.com/album/6eySoBfcexiGQOFBtUhkis"
+                            data-apple="https://music.apple.com/cz/album/bronx-slowed-reverb/1754083378?i=1754083380"
+                            data-youtube="https://www.youtube.com/watch?v=-Na_P95rBgc"
+                            data-soundcloud="https://soundcloud.com/xstyurkur/bronx">
+                            <img src="bronx_cover.webp" alt="yurkur - Bronx">
+                        </div>
+
+                        <div class="discography-item" data-title="Stín" data-artist="MukL (feat. yurkur)"
+                            data-date="26. ledna 2024" data-cover="stin_cover.webp"
+                            data-spotify="https://open.spotify.com/album/3hBtguymfC21dy2zhoN7k5"
+                            data-apple="https://music.apple.com/cz/album/stín-feat-yurkur-single/1728184579"
+                            data-youtube="https://www.youtube.com/watch?v=lj8iTnZmVb4" data-soundcloud="">
+                            <img src="stin_cover.webp" alt="MukL - Stín (feat. yurkur)">
+                        </div>
+
+                        <div class="discography-item" data-title="Sám" data-artist="yurkur" data-date="7. dubna 2023"
+                            data-cover="sam_cover.webp"
+                            data-spotify="https://open.spotify.com/album/1Sp4VtDzTBJPyoNIHRSjDa"
+                            data-apple="https://music.apple.com/cz/album/sám-single/1680389082"
+                            data-youtube="https://www.youtube.com/watch?v=vHoxPTF-978"
+                            data-soundcloud="https://soundcloud.com/xstyurkur/sam">
+                            <img src="sam_cover.webp" alt="yurkur - Sám">
+                        </div>
+
+                        <div class="discography-item" data-title="Nenávist" data-artist="MukL" data-date="2. dubna 2023"
+                            data-cover="nenavist_cover.webp"
+                            data-spotify="https://open.spotify.com/album/5cVmowKnsXDQ8m4VyrUnVU"
+                            data-apple="https://music.apple.com/cz/album/nenávist-single/1680166765"
+                            data-youtube="https://www.youtube.com/watch?v=jfnIk6m7A08" data-soundcloud="">
+                            <img src="nenavist_cover.webp" alt="MukL - Nenávist">
+                        </div>
+
+                        <div class="discography-item" data-title="Level Up" data-artist="yurkur (feat. MukL)"
+                            data-date="7. března 2023" data-cover="levelup_cover.webp"
+                            data-spotify="https://open.spotify.com/album/4GHm28Djxdl1VbapOLzT8D"
+                            data-apple="https://music.apple.com/cz/album/level-up-feat-mukl-single/1675208253"
+                            data-youtube="https://www.youtube.com/watch?v=qxdf9yZRa7U"
+                            data-soundcloud="https://soundcloud.com/xstyurkur/level-up-feat-mukl">
+                            <img src="levelup_cover.webp" alt="yurkur - Level Up (feat. MukL)">
+                        </div>
+
+                        <div class="discography-item" data-title="Já" data-artist="MukL" data-date="23. ledna 2023"
+                            data-cover="ja_cover.webp"
+                            data-spotify="https://open.spotify.com/album/61MPzblCanNZB1TRTI5VgO"
+                            data-apple="https://music.apple.com/cz/album/já-single/1666952964"
+                            data-youtube="https://www.youtube.com/watch?v=9pwmfCwHnAo" data-soundcloud="">
+                            <img src="ja_cover.webp" alt="MukL - Já">
+                        </div>
+
+                        <div class="discography-item" data-title="Kde Seš" data-artist="yurkur"
+                            data-date="13. ledna 2023" data-cover="kdeses_cover.webp"
+                            data-spotify="https://open.spotify.com/album/0AE7WR50zL4tMeYrVLVQgo"
+                            data-apple="https://music.apple.com/cz/album/kde-seš-single/1663666449"
+                            data-youtube="https://www.youtube.com/watch?v=npnYNF1MpAU"
+                            data-soundcloud="https://soundcloud.com/xstyurkur/kde-ses">
+                            <img src="kdeses_cover.webp" alt="yurkur - Kde Seš">
+                        </div>
+
+                        <div class="discography-item" data-title="Pelé" data-artist="MukL & yurkur"
+                            data-date="31. prosince 2022" data-cover="pele_cover.webp" data-spotify="" data-apple=""
+                            data-youtube="https://www.youtube.com/watch?v=AkBLdjSAfvM"
+                            data-soundcloud="https://soundcloud.com/xstyurkur/mukl-yurkur-pelle">
+                            <img src="pele_cover.webp" alt="MukL & yurkur - Pelé">
+                        </div>
+
+                        <div class="discography-item" data-title="Moon Rock" data-artist="MukL"
+                            data-date="7. listopadu 2022" data-cover="moonrock_cover.webp"
+                            data-spotify="https://open.spotify.com/album/4aIF6wOXYHnyfj0cUfpZba"
+                            data-apple="https://music.apple.com/cz/album/moon-rock-single/1653215586"
+                            data-youtube="https://www.youtube.com/watch?v=eDuZSjJhxTc" data-soundcloud="">
+                            <img src="moonrock_cover.webp" alt="MukL - Moon Rock">
+                        </div>
+
+                        <div class="discography-item" data-title="Když Je Noc" data-artist="yurkur (feat. MukL)"
+                            data-date="30. září 2022" data-cover="kdyzjenoc_cover.webp"
+                            data-spotify="https://open.spotify.com/album/3YwsfS2oZzKhCUDLOvSttv"
+                            data-apple="https://music.apple.com/cz/album/když-je-noc-feat-mukl-single/1648188426"
+                            data-youtube="https://www.youtube.com/watch?v=6ePPaI0iXqg"
+                            data-soundcloud="https://soundcloud.com/xstyurkur/kdyz-je-noc-feat-mukl">
+                            <img src="kdyzjenoc_cover.webp" alt="yurkur - Když Je Noc (feat. MukL)">
+                        </div>
+
+                        <div class="discography-item" data-title="První Třída" data-artist="MukL (feat. yurkur)"
+                            data-date="15. září 2022" data-cover="prvnitrida_cover.webp"
+                            data-spotify="https://open.spotify.com/album/1Tar5mjjDP8YBVctM62hwX"
+                            data-apple="https://music.apple.com/cz/album/první-třída-feat-yurkur-single/1644990156"
+                            data-youtube="https://www.youtube.com/watch?v=YuPckKVq8xE"
+                            data-soundcloud="https://soundcloud.com/xstmukl/prvni-trida-feat-yurkur">
+                            <img src="prvnitrida_cover.webp" alt="MukL - První Třída (feat. yurkur)">
+                        </div>
+
+                        <div class="discography-item" data-title="SLOWMODE" data-artist="MukL (feat. Fakin Bůh)"
+                            data-date="8. července 2022" data-cover="slowmode_cover.webp"
+                            data-spotify="https://open.spotify.com/album/3NZKub0XBFLgFC1J8WBRVH"
+                            data-apple="https://music.apple.com/cz/album/slowmode-feat-fakin-bůh-single/1632500381"
+                            data-youtube="https://www.youtube.com/watch?v=HjawJed5dm0" data-soundcloud="">
+                            <img src="slowmode_cover.webp" alt="MukL - SLOWMODE (feat. Fakin Bůh)">
+                        </div>
+
+                        <div class="discography-item" data-title="SRT Demon" data-artist="yurkur"
+                            data-date="11. března 2022" data-cover="srt_demon_cover.webp"
+                            data-spotify="https://open.spotify.com/album/2EBXotUjYO0VMI8O9knBg9"
+                            data-apple="https://music.apple.com/cz/album/srt-demon-single/1612911996"
+                            data-youtube="https://www.youtube.com/watch?v=J2vuhFwgQq4"
+                            data-soundcloud="https://soundcloud.com/xstyurkur/srt-demon">
+                            <img src="srt_demon_cover.webp" alt="yurkur - SRT Demon">
+                        </div>
+
+                        <div class="discography-item" data-title="Nikdy Stop" data-artist="MukL (feat. yurkur)"
+                            data-date="11. července 2021" data-cover="nikdystop_cover.webp"
+                            data-spotify="https://open.spotify.com/album/4hK4Z39kYn4Nq6ny4RDyQT"
+                            data-apple="https://music.apple.com/cz/album/nikdy-stop-feat-yurkur-single/1611242807"
+                            data-youtube="https://www.youtube.com/watch?v=e31FfGkJHZs" data-soundcloud="">
+                            <img src="nikdystop_cover.webp" alt="MukL - Nikdy Stop (feat. yurkur)">
+                        </div>
+
+                        <div class="discography-item" data-title="Za Pár Let" data-artist="yurkur"
+                            data-date="1. července 2021" data-cover="zpl_cover.webp"
+                            data-spotify="https://open.spotify.com/album/5RVGO6DXDY4j3yZd9zBFjY"
+                            data-apple="https://music.apple.com/cz/album/za-pár-let-single/1574280277"
+                            data-youtube="https://www.youtube.com/watch?v=eSnLwrxPBq4"
+                            data-soundcloud="https://soundcloud.com/xstyurkur/za-par-let">
+                            <img src="zpl_cover.webp" alt="yurkur - Za Pár Let">
+                        </div>
+
+                        <div class="discography-item" data-title="Místo" data-artist="MukL"
+                            data-date="11. července 2021" data-cover="misto_cover.webp"
+                            data-spotify="https://open.spotify.com/album/2DAnGlwR2gSCunAlEoRPVI"
+                            data-apple="https://music.apple.com/cz/album/místo-single/1611242988"
+                            data-youtube="https://www.youtube.com/watch?v=VtGBj_YvD_M" data-soundcloud="">
+                            <img src="misto_cover.webp" alt="MukL - Místo">
+                        </div>
+
+                        <div class="discography-item" data-title="Nízko!" data-artist="yurkur (feat. MukL)"
+                            data-date="1. května 2021" data-cover="nizko_cover.webp"
+                            data-spotify="https://open.spotify.com/album/0mkZMzjLKRglZA0H1fx5KH"
+                            data-apple="https://music.apple.com/cz/album/nízko-feat-mukl-single/1567753434"
+                            data-youtube="https://www.youtube.com/watch?v=bNyfRtZnX8Y"
+                            data-soundcloud="https://soundcloud.com/xstyurkur/nizko-feat-mukl">
+                            <img src="nizko_cover.webp" alt="yurkur - Nízko! (feat. MukL)">
+                        </div>
+
+                        <div class="discography-item" data-title="NechSiTo!" data-artist="MukL & yurkur"
+                            data-date="16. dubna 2021" data-cover="nechsito_cover.webp"
+                            data-spotify="https://open.spotify.com/album/33dI15CKep113M6GiCdRiH"
+                            data-apple="https://music.apple.com/cz/album/nechsito-single/1611712390"
+                            data-youtube="https://www.youtube.com/watch?v=kVc7zbQcW94"
+                            data-soundcloud="https://soundcloud.com/xstmukl/mukl-x-yurkur-nechsito">
+                            <img src="nechsito_cover.webp" alt="MukL & yurkur - NechSiTo!">
+                        </div>
+
+                        <div class="discography-item" data-title="ONE TAP" data-artist="MukL & yurkur"
+                            data-date="20. listopadu 2019" data-cover="OT_cover.webp" data-spotify="" data-apple=""
+                            data-youtube="https://www.youtube.com/watch?v=MywRe529Lj0"
+                            data-soundcloud="https://soundcloud.com/xstmukl/yurkur-x-mukl-one-tap">
+                            <img src="OT_cover.webp" alt="MukL & yurkur - ONE TAP">
+                        </div>
+
+                        <div class="discography-item" data-title="Vzhůru Nohama" data-artist="MukL & yurkur"
+                            data-date="20. října 2018" data-cover="sample_cover.webp" data-spotify="" data-apple=""
+                            data-youtube="https://www.youtube.com/watch?v=oa42t040kqs"
+                            data-soundcloud="https://soundcloud.com/xstyurkur/yurkur-vzhuru-nohama-feat-mukl">
+                            <img src="sample_cover.webp" alt="MukL & yurkur - Vzhůru Nohama">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="discography-section">
+                    <h1 class="discography-title">
+                        Features
+                    </h1>
+
+                    <div class="discography-grid grid-small">
+                        <div class="discography-item" data-title="99SESSIONS" data-artist="JAEJAY (feat. MukL)"
+                            data-date="" data-cover="99_cover.webp"
+                            data-spotify="https://open.spotify.com/track/0q3hwNK667qbYZauE0wCIk"
+                            data-apple="https://music.apple.com/cz/song/99sessions/1835292117"
+                            data-youtube="https://www.youtube.com/watch?v=lvVd_kkdLHY" data-soundcloud="">
+                            <img src="99_cover.webp" alt="JAEJAY - 99SESSIONS feat. MukL">
+                        </div>
+
+                        <div class="discography-item" data-title="New Balance" data-artist="Falko Zvalko (feat. MukL)"
+                            data-date="" data-cover="nb_cover.webp"
+                            data-spotify="https://open.spotify.com/album/0D9oDeAgR79hZS58SsgC65"
+                            data-apple="https://music.apple.com/cz/album/new-balance-feat-mukl/1858848477?i=1858848480"
+                            data-youtube="https://www.youtube.com/watch?v=1zzVIvsUOYg" data-soundcloud="">
+                            <img src="nb_cover.webp" alt="Falko Zvalko - New Balance feat. MukL">
+                        </div>
+
+                        <div class="discography-item" data-title="Redpack" data-artist="FakeSmile (feat. MukL)"
+                            data-date="" data-cover="redpack_cover.webp"
+                            data-spotify="https://open.spotify.com/album/3ofbHS3MpdgQw4z8AcRFxC"
+                            data-apple="https://music.apple.com/cz/song/redpack-feat-mukl/1676929001"
+                            data-youtube="https://www.youtube.com/watch?v=_TVPV-hECso" data-soundcloud="">
+                            <img src="redpack_cover.webp" alt="FakeSmile - Redpack feat. MukL">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="discography-section">
+                    <h1 class="discography-title">
+                        Beat Tapes
+                    </h1>
+
+                    <div class="discography-grid grid-small">
+                        <div class="discography-item" data-title="BLEEDING" data-artist="yurkur" data-date=""
+                            data-cover="bleeding_cover.webp" data-spotify="" data-apple="" data-youtube=""
+                            data-soundcloud="https://soundcloud.com/xstyurkur/sets/bleeding">
+                            <img src="bleeding_cover.webp" alt="yurkur - BLEEDING">
+                        </div>
+
+                        <div class="discography-item" data-title="LAME" data-artist="yurkur" data-date=""
+                            data-cover="lame_cover.webp" data-spotify="" data-apple="" data-youtube=""
+                            data-soundcloud="https://soundcloud.com/xstyurkur/sets/lame">
+                            <img src="lame_cover.webp" alt="yurkur - LAME">
+                        </div>
+
+                        <div class="discography-item" data-title="TWWCHNT" data-artist="yurkur" data-date=""
+                            data-cover="twwchnt_cover.webp" data-spotify="" data-apple="" data-youtube=""
+                            data-soundcloud="https://soundcloud.com/xstyurkur/sets/thats-why-we-cant-have-nice-things">
+                            <img src="twwchnt_cover.webp" alt="yurkur - THAT'S WHY WE CAN'T HAVE NICE THINGS">
+                        </div>
+
+                        <div class="discography-item" data-title="CYCLE" data-artist="yurkur" data-date=""
+                            data-cover="cycle_cover.webp" data-spotify="" data-apple="" data-youtube=""
+                            data-soundcloud="https://soundcloud.com/xstyurkur/sets/cycle">
+                            <img src="cycle_cover.webp" alt="yurkur - CYCLE">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="discography-section">
+                    <h1 class="discography-title">
+                        Socials
+                    </h1>
+
+                    <div class="social-links">
+                        <a class="social-btn" href="https://www.instagram.com/xstmukl/" target="_blank"
+                            rel="noopener noreferrer">
+                            <img src="instagram.svg" alt="">
+                            <span>MukL</span>
+                            <span class="sr-only"> — Instagram</span>
+                        </a>
+
+                        <a class="social-btn" href="https://open.spotify.com/artist/3U5ijCJy1aHfSQTHHnnprN"
+                            target="_blank" rel="noopener noreferrer">
+                            <img src="spotify.svg" alt="">
+                            <span>MukL</span>
+                            <span class="sr-only"> — Spotify</span>
+                        </a>
+
+                        <a class="social-btn" href="https://music.apple.com/cz/artist/mukl/1567753435" target="_blank"
+                            rel="noopener noreferrer">
+                            <img src="apple.svg" alt="">
+                            <span>MukL</span>
+                            <span class="sr-only"> — Apple Music</span>
+                        </a>
+
+                        <a class="social-btn" href="https://soundcloud.com/xstmukl" target="_blank"
+                            rel="noopener noreferrer">
+                            <img src="soundcloud.svg" alt="">
+                            <span>MukL</span>
+                            <span class="sr-only"> — SoundCloud</span>
+                        </a>
+
+                        <a class="social-btn" href="https://www.instagram.com/yurkur.exe/" target="_blank"
+                            rel="noopener noreferrer">
+                            <img src="instagram.svg" alt="">
+                            <span>yurkur</span>
+                            <span class="sr-only"> — Instagram</span>
+                        </a>
+
+                        <a class="social-btn" href="https://open.spotify.com/artist/5azgKBwnZoAybIieSr5YlO"
+                            target="_blank" rel="noopener noreferrer">
+                            <img src="spotify.svg" alt="">
+                            <span>yurkur</span>
+                            <span class="sr-only"> — Spotify</span>
+                        </a>
+
+                        <a class="social-btn" href="https://music.apple.com/cz/artist/yurkur/1548020494" target="_blank"
+                            rel="noopener noreferrer">
+                            <img src="apple.svg" alt="">
+                            <span>yurkur</span>
+                            <span class="sr-only"> — Apple Music</span>
+                        </a>
+
+                        <a class="social-btn" href="https://soundcloud.com/xstyurkur" target="_blank"
+                            rel="noopener noreferrer">
+                            <img src="soundcloud.svg" alt="">
+                            <span>yurkur</span>
+                            <span class="sr-only"> — SoundCloud</span>
+                        </a>
+                    </div>
+                </div>
+        </section>
+
+        <div class="modal" id="releaseModal">
+            <div class="modal-content">
+                <button class="modal-close">×</button>
+
+                <img class="modal-cover" src="" alt="">
+                <h2 class="modal-title"></h2>
+                <h3 class="modal-artist"></h3>
+
+                <div class="modal-links"></div>
+            </div>
+        </div>
+
+        <section class="timeline" id="timeline">
+            <div class="container timeline-inner">
+                <article class="timeline-item" id="vzhuru_nohama">
+                    <header class="item-head">
+                        <h1 class="page-title">XST Timeline</h1>
+                        <p class="page-subtitle">Založeno 2018</p>
+                        <div class="timeline-line-vert"></div>
+                        <p class="item-title">Kde to začalo - Vzhůru Nohama</p>
+                        <p class="item-meta">Datum vydání: 20. října 2018</p>
+                    </header>
+                    <div class="video-card">
+                        <div class="video-frame">
+                            <iframe src="https://www.youtube-nocookie.com/embed/oa42t040kqs"
                                 title="YouTube - Vzhůru Nohama"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen></iframe>
@@ -71,7 +525,11 @@
                     </div>
                     <div class="item-body">
                         <p>
-                                Od května 2017 se hoši učili s vybavením a softwarem. Yurkur se chopil produkce jakožto beatmaker. Experimentoval s FL Studiem už na střední. Beat se samplem ‘Much Better Off’ od Smokey Robinsona se oboum líbil tolik, že napsali společně text a song vydali jako ‘Vzhůru Nohama’. Přes slabší kvalitu mixu vokálů zůstává tenhle song jako připomínka začátku a nadšení pro tvorbu hudby i vizuální identity (pouze na YouTube a SoundCloudu). 
+                            Od května 2017 se kluci učili s vybavením a softwarem. Yurkur se chopil produkce jakožto
+                            beatmaker. Experimentoval s FL Studiem už na střední. Beat se samplem ‘Much Better Off’ od
+                            Smokey Robinsona se oběma líbil tolik, že společně napsali text a song vydali jako ‘Vzhůru
+                            Nohama’. Přes slabší kvalitu mixu vokálů zůstává tento song jako připomínka začátku a
+                            nadšení pro tvorbu hudby i vizuální identity (pouze na YouTube a SoundCloudu).
                         </p>
                         <div class="timeline-line-hor"></div>
                     </div>
@@ -81,19 +539,20 @@
                         <p class="page-subtitle">2019</p>
                         <div class="timeline-line-vert"></div>
                         <p class="item-title">ONE TAP</p>
-                        <p class="item-meta">Datum vydání: 20.listopad 2019</p>
+                        <p class="item-meta">Datum vydání: 20. listopadu 2019</p>
+                    </header>
                     <div class="video-card">
                         <div class="video-frame">
-                            <iframe
-                                src="https://www.youtube-nocookie.com/embed/MywRe529Lj0"
-                                title="YouTube - ONE TAP"
+                            <iframe src="https://www.youtube-nocookie.com/embed/MywRe529Lj0" title="YouTube - ONE TAP"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen></iframe>
                         </div>
                     </div>
                     <div class="item-body">
                         <p>
-                                Během roku 2019 vznikaly další tracky a nápady, na kterejch si MukL a yurkur trénovali skills. Na ostro vydali jen banger ONE TAP s produkcí od ESKRYho (pouze na YouTube a SoundCloudu). 
+                            Během roku 2019 vznikaly další tracky a nápady, na kterých si MukL a yurkur trénovali
+                            dovednosti. Naostro vydali jen song ONE TAP s produkcí od ESKRYho (pouze na YouTube a
+                            SoundCloudu).
                         </p>
                         <div class="timeline-line-hor"></div>
                     </div>
@@ -103,19 +562,21 @@
                         <p class="page-subtitle">2020</p>
                         <div class="timeline-line-vert"></div>
                         <p class="item-title">m&m (feat. Khol)</p>
-                        <p class="item-meta">Datum vydání: 5.srpen 2020</p>
+                        <p class="item-meta">Datum vydání: 5. srpna 2020</p>
+                    </header>
                     <div class="video-card">
                         <div class="video-frame">
-                            <iframe
-                                src="https://www.youtube-nocookie.com/embed/cpJhgqWUWZ4"
-                                title="YouTube - m&m"
+                            <iframe src="https://www.youtube-nocookie.com/embed/cpJhgqWUWZ4" title="YouTube - m&m"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen></iframe>
                         </div>
                     </div>
                     <div class="item-body">
                         <p>
-                                I když svět pohltila pandemie, nahrávání se nezastavilo. Nejprve proběhnul trend #hot16challenge - zareagoval MukL, vali, vojtechx a Khol. Ten se později objevil jako feature na songu ‘m&m’ od MukLa. Podobně jako ‘ONE TAP’ šlo o agresivní banger (pouze na YouTube).
+                            I když svět pohltila pandemie, nahrávání se nezastavilo. Nejprve proběhl trend
+                            #hot16challenge - zareagoval MukL, vali, vojtechx a Khol. Ten se později objevil jako
+                            host na songu ‘m&m’ od MukLa. Podobně jako ‘ONE TAP’ šlo o agresivní track (pouze na
+                            YouTube).
                         </p>
                         <div class="timeline-line-hor"></div>
                     </div>
@@ -125,20 +586,24 @@
                         <p class="page-subtitle">Restart - 2021</p>
                         <div class="timeline-line-vert"></div>
                         <p class="item-title">NechSiTo!</p>
-                        <p class="item-meta">Datum vydání: 16.duben 2021</p>
+                        <p class="item-meta">Datum vydání: 16. dubna 2021</p>
                     </header>
                     <div class="video-card">
                         <div class="video-frame">
-                            <iframe
-                                src="https://www.youtube-nocookie.com/embed/kVc7zbQcW94"
-                                title="YouTube - NechSiTo!"
+                            <iframe src="https://www.youtube-nocookie.com/embed/kVc7zbQcW94" title="YouTube - NechSiTo!"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen></iframe>
                         </div>
                     </div>
                     <div class="item-body">
                         <p>
-                            Kluci uznali, že je čas dostat jejich hudbu, kam to jen půjde. Počínaje jarem 2021 byly vydaný songy k poslechu na streamovacích platformách. Nejdůležitější změna ale proběhla v hudbě samotný. Inspirace přišla z alba ‘Whole Lotta Red’ od Playboi Cartiho, který vyšlo v prosinci 2020. Jednoduchý chytlavý beaty, proměnlivý auto-tune flows a krátký formy písniček. A protože byl yurkur v tuhle chvíli inspirovanej stylem Pierra Bourna co se týče produkce, byl tenhle přechod dost přirozenej. V dubnu vyšel společnej song ‘NechSiTo!’ a o dva týdny později klip ‘Nízko!’ od yurkura s MukLem na featu.
+                            Kluci uznali, že je čas dostat jejich hudbu, kam to jen půjde. Počínaje jarem 2021 byly
+                            vydané songy k poslechu na streamovacích platformách. Nejdůležitější změna ale proběhla v
+                            hudbě samotné. Inspirace přišla z alba ‘Whole Lotta Red’ od Playboi Cartiho, které vyšlo v
+                            prosinci 2020. Jednoduché chytlavé beaty, proměnlivé auto-tune flows a krátké formy
+                            písniček. A protože byl yurkur v tuhle chvíli inspirovaný stylem Pierra Bourna, co se týče
+                            produkce, byl tenhle přechod dost přirozený. V dubnu vyšel společný song ‘NechSiTo!’ a o
+                            dva týdny později klip ‘Nízko!’ od yurkura s MukLem na featu.
                         </p>
                     </div>
                 </article>
@@ -146,12 +611,11 @@
                     <header class="item-head">
                         <div class="timeline-line-vert"></div>
                         <p class="item-title">Nízko! (feat. MukL)</p>
-                        <p class="item-meta">Datum vydání: 1.květen 2021</p>
+                        <p class="item-meta">Datum vydání: 1. května 2021</p>
                     </header>
                     <div class="video-card">
                         <div class="video-frame">
-                            <iframe
-                                src="https://www.youtube-nocookie.com/embed/bNyfRtZnX8Y"
+                            <iframe src="https://www.youtube-nocookie.com/embed/bNyfRtZnX8Y"
                                 title="YouTube - Nízko! (feat. MukL)"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen></iframe>
@@ -159,7 +623,10 @@
                     </div>
                     <div class="item-body">
                         <p>
-                            Oba tracky sklidily pozitivní ohlasy. To byl jasnej ukazatel toho, že se ubírají dobrým směrem. K tomu taky pomohlo zlepšení na frontě mixu vokálů i instrumentálů. Bylo to období, kdy MukL s yurkurem denně  trávili hodiny před mikrofonem. Tvorba byla v plným proudu a songy vycházely na měsíční bázi. V průběhu léta 2021 vyšlo ještě několik kousků:
+                            Oba tracky sklidily pozitivní ohlasy. To byl jasný ukazatel toho, že se ubírají dobrým
+                            směrem. K tomu také pomohlo zlepšení v oblasti mixu vokálů i instrumentálů. Bylo to období,
+                            kdy MukL s yurkurem denně trávili hodiny před mikrofonem. Tvorba byla v plném proudu a songy
+                            vycházely na měsíční bázi. V průběhu léta 2021 vyšlo ještě několik skladeb:
                         </p>
                     </div>
                 </article>
@@ -167,13 +634,11 @@
                     <header class="item-head">
                         <div class="timeline-line-vert"></div>
                         <p class="item-title">Místo</p>
-                        <p class="item-meta">Datum vydání: 11.červen 2021</p>
+                        <p class="item-meta">Datum vydání: 11. července 2021</p>
                     </header>
                     <div class="video-card">
                         <div class="video-frame">
-                            <iframe
-                                src="https://www.youtube-nocookie.com/embed/VtGBj_YvD_M"
-                                title="YouTube - Místo"
+                            <iframe src="https://www.youtube-nocookie.com/embed/VtGBj_YvD_M" title="YouTube - Místo"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen></iframe>
                         </div>
@@ -183,12 +648,11 @@
                     <header class="item-head">
                         <div class="timeline-line-vert"></div>
                         <p class="item-title">Nikdy Stop (feat. yurkur)</p>
-                        <p class="item-meta">Datum vydání: 11.červenec 2021</p>
+                        <p class="item-meta">Datum vydání: 11. července 2021</p>
                     </header>
                     <div class="video-card">
                         <div class="video-frame">
-                            <iframe
-                                src="https://www.youtube-nocookie.com/embed/e31FfGkJHZs"
+                            <iframe src="https://www.youtube-nocookie.com/embed/e31FfGkJHZs"
                                 title="YouTube - Nikdy Stop (feat. yurkur)"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen></iframe>
@@ -201,13 +665,11 @@
                         <p class="page-subtitle">2022</p>
                         <div class="timeline-line-vert"></div>
                         <p class="item-title">SRT Demon</p>
-                        <p class="item-meta">Datum vydání: 11.březen 2022</p>
+                        <p class="item-meta">Datum vydání: 11. března 2022</p>
                     </header>
                     <div class="video-card">
                         <div class="video-frame">
-                            <iframe
-                                src="https://www.youtube-nocookie.com/embed/J2vuhFwgQq4"
-                                title="YouTube - SRT Demon"
+                            <iframe src="https://www.youtube-nocookie.com/embed/J2vuhFwgQq4" title="YouTube - SRT Demon"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen></iframe>
                         </div>
@@ -217,20 +679,26 @@
                     <header class="item-head">
                         <div class="timeline-line-vert"></div>
                         <p class="item-title">Kush + Music EP</p>
-                        <p class="item-meta">Datum vydání: 1.červenec 2022</p>
+                        <p class="item-meta">Datum vydání: 1. července 2022</p>
                     </header>
                     <div class="video-card">
                         <div class="video-frame">
-                            <iframe
-                                src="https://www.youtube-nocookie.com/embed/hF1pPryM3ds"
-                                title="YouTube - Nonstop"
+                            <iframe src="https://www.youtube-nocookie.com/embed/hF1pPryM3ds" title="YouTube - Nonstop"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen></iframe>
                         </div>
                     </div>
                     <div class="item-body">
                         <p>
-                            Začátkem července 2022 vyšla první sbírka songů v podobě ‘Kush + Music’ EP. Sestaveno a nahráno během června, tohle EP je kombinace všech inspirací, který hoši v týhle době poslouchali s trochou vlastního koření. Jde o 9 krátkejch tracků s různejma vibes a příchutěma, akorát dosahujících 20minut. Instrumentály, mixy a sequencing - všechno 100% homemade. Celý EP si můžeš poslechnout <a href="https://open.spotify.com/album/3XE8qSIX9b2s3ApCVCerzF" target="_blank" rel="noopener noreferrer" class="timeline-link">tady.</a>
+                            Začátkem července 2022 vyšla první sbírka songů v podobě ‘Kush + Music’ EP. Toto EP které
+                            bylo sestaveno a
+                            nahráno během června, je kombinace všech inspirací, které kluci v této době
+                            poslouchali. Jde o 9 krátkých tracků s různými odstíny a
+                            příchutěmi, akorát dosahujících 20minut. Instrumentály, mixy a sequencing - všechno sto
+                            procent
+                            domácí produkt. Celé EP si můžeš poslechnout <a
+                                href="https://open.spotify.com/album/3XE8qSIX9b2s3ApCVCerzF" target="_blank"
+                                rel="noopener noreferrer" class="timeline-link">tady.</a>
                         </p>
                     </div>
                 </article>
@@ -238,20 +706,19 @@
                     <header class="item-head">
                         <div class="timeline-line-vert"></div>
                         <p class="item-title">SLOWMODE (feat. Fakin Bůh)</p>
-                        <p class="item-meta">Datum vydání: 8.červenec 2022</p>
+                        <p class="item-meta">Datum vydání: 8. července 2022</p>
                     </header>
                     <div class="video-card">
                         <div class="video-frame">
-                            <iframe
-                                src="https://www.youtube-nocookie.com/embed/HjawJed5dm0"
-                                title="YouTube - SLOWMODE"
+                            <iframe src="https://www.youtube-nocookie.com/embed/HjawJed5dm0" title="YouTube - SLOWMODE"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen></iframe>
                         </div>
                     </div>
                     <div class="item-body">
                         <p>
-                            Týden od vydání ‘Kush + Music’, MukL vyhodil novej track ‘SLOWMODE’, kde si pozval na feat Fakin Boha - první kolaborace mimo XST bublinu.
+                            Týden po vydání ‘Kush + Music’ vyhodil MukL nový track ‘SLOWMODE’. Pozval si na feat
+                            Fakin Boha, označující první kolaboraci mimo okruh XST.
                         </p>
                     </div>
                 </article>
@@ -259,12 +726,11 @@
                     <header class="item-head">
                         <div class="timeline-line-vert"></div>
                         <p class="item-title">První Třída (feat. yurkur)</p>
-                        <p class="item-meta">Datum vydání: 15.září 2022</p>
+                        <p class="item-meta">Datum vydání: 15. září 2022</p>
                     </header>
                     <div class="video-card">
                         <div class="video-frame">
-                            <iframe
-                                src="https://www.youtube-nocookie.com/embed/YuPckKVq8xE"
+                            <iframe src="https://www.youtube-nocookie.com/embed/YuPckKVq8xE"
                                 title="YouTube - První Třída (feat. yurkur)"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen></iframe>
@@ -272,7 +738,9 @@
                     </div>
                     <div class="item-body">
                         <p>
-                            Po MukLově návratu z Norska dali dohromady song ‘První Třída’. Krátkej chill track vydanej s jednoduchým klipem. O dva týdny později vyšel yurkurův track ‘Když Je Noc’ s opětovným featem od MukLa - trochu vážnější vibe reagující na dění ve světě.
+                            Po MukLově návratu z Norska dali dohromady song ‘První Třída’. Krátká skladba vydaná s
+                            jednoduchým klipem. O dva týdny později vyšel yurkurův track ‘Když Je Noc’ s opětovným
+                            featem od MukLa - trochu vážnější atmosféra reagující na dění ve světě.
                         </p>
                     </div>
                 </article>
@@ -280,12 +748,11 @@
                     <header class="item-head">
                         <div class="timeline-line-vert"></div>
                         <p class="item-title">Když Je Noc (feat. MukL)</p>
-                        <p class="item-meta">Datum vydání: 30.září 2022</p>
+                        <p class="item-meta">Datum vydání: 30. září 2022</p>
                     </header>
                     <div class="video-card">
                         <div class="video-frame">
-                            <iframe
-                                src="https://www.youtube-nocookie.com/embed/6ePPaI0iXqg"
+                            <iframe src="https://www.youtube-nocookie.com/embed/6ePPaI0iXqg"
                                 title="YouTube - Když Je Noc (feat. MukL)"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen></iframe>
@@ -296,43 +763,43 @@
                     <header class="item-head">
                         <div class="timeline-line-vert"></div>
                         <p class="item-title">Moon Rock</p>
-                        <p class="item-meta">Datum vydání: 7.listopad 2022</p>
+                        <p class="item-meta">Datum vydání: 7. listopadu 2022</p>
                     </header>
                     <div class="video-card">
                         <div class="video-frame">
-                            <iframe
-                                src="https://www.youtube-nocookie.com/embed/eDuZSjJhxTc"
-                                title="YouTube - Moon Rock"
+                            <iframe src="https://www.youtube-nocookie.com/embed/eDuZSjJhxTc" title="YouTube - Moon Rock"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen></iframe>
                         </div>
                     </div>
                     <div class="item-body">
                         <p>
-                            Poslední song vydanej v roce 2022 byl Moon Rock od MukLa. Svižný DnB tempo a příjemný piáno na instrumentálu se ukázaly jako dobrý vibes.
+                            Poslední song vydaný v roce 2022 byl Moon Rock od MukLa. Svižné DnB tempo a příjemné piáno
+                            na instrumentálu se ukázala jako dobrá volba.
                         </p>
                     </div>
-                <div class="timeline-line-hor"></div>
+                    <div class="timeline-line-hor"></div>
                 </article>
                 <article class="timeline-item" id="kde_ses">
                     <header class="item-head">
                         <p class="page-subtitle">2023</p>
                         <div class="timeline-line-vert"></div>
                         <p class="item-title">Kde Seš</p>
-                        <p class="item-meta">Datum vydání: 13.leden 2023</p>
+                        <p class="item-meta">Datum vydání: 13. ledna 2023</p>
                     </header>
                     <div class="video-card">
                         <div class="video-frame">
-                            <iframe
-                                src="https://www.youtube-nocookie.com/embed/npnYNF1MpAU"
-                                title="YouTube - Kde Seš"
+                            <iframe src="https://www.youtube-nocookie.com/embed/npnYNF1MpAU" title="YouTube - Kde Seš"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen></iframe>
                         </div>
                     </div>
                     <div class="item-body">
                         <p>
-                            Pohodovej sólo single 'Kde Seš' od yurkura vyšel hned z kraje roku. Přes jemný synťáky a slunnou atmosféru na beatu, je náboj textů spíš smutnějšího rázu. Tenle song odstartoval solidní run, kterej trval až do léta.
+                            Pohodový sólo single 'Kde Seš' od yurkura vyšel hned zkraje roku. Přes příjemný syntezátory
+                            a
+                            uvolněné tempo se v textech vyskytoval smutek a sebekritika. Tento song odstartoval solidní
+                            sérii, která trvala až do léta.
                         </p>
                     </div>
                 </article>
@@ -340,20 +807,20 @@
                     <header class="item-head">
                         <div class="timeline-line-vert"></div>
                         <p class="item-title">Já</p>
-                        <p class="item-meta">Datum vydání: 23.leden 2023</p>
+                        <p class="item-meta">Datum vydání: 23. ledna 2023</p>
                     </header>
                     <div class="video-card">
                         <div class="video-frame">
-                            <iframe
-                                src="https://www.youtube-nocookie.com/embed/9pwmfCwHnAo"
-                                title="YouTube - Já"
+                            <iframe src="https://www.youtube-nocookie.com/embed/9pwmfCwHnAo" title="YouTube - Já"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen></iframe>
                         </div>
                     </div>
                     <div class="item-body">
                         <p>
-                            Následující track s názvem 'Já' dropnul MukL o 10 dní později, společně s klipem točeným v Norsku. MukL se v tuhle dobu začal víc zajímat o produkci beatů - piánovou melodii kterou složil, s yurkurem společně dohladili a vykovali z ní beat právě na tenhle single.
+                            Následující track s názvem 'Já' vydal MukL o 10 dní později, společně s klipem točeným v
+                            Norsku. MukL se v tuto dobu začal víc zajímat o produkci beatů - piánovou melodii, kterou
+                            složil, s yurkurem společně dohladili a vykovali z ní beat právě na tento single.
                         </p>
                     </div>
                 </article>
@@ -361,12 +828,11 @@
                     <header class="item-head">
                         <div class="timeline-line-vert"></div>
                         <p class="item-title">Level Up (feat. MukL)</p>
-                        <p class="item-meta">Datum vydání: 3.březen 2023</p>
+                        <p class="item-meta">Datum vydání: 3. března 2023</p>
                     </header>
                     <div class="video-card">
                         <div class="video-frame">
-                            <iframe
-                                src="https://www.youtube-nocookie.com/embed/qxdf9yZRa7U"
+                            <iframe src="https://www.youtube-nocookie.com/embed/qxdf9yZRa7U"
                                 title="YouTube - Level Up (feat. MukL)"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen></iframe>
@@ -374,7 +840,10 @@
                     </div>
                     <div class="item-body">
                         <p>
-                            Na jaře se yurkur vrátil s trackem 'Level Up', ke kterýmu natočili pestrej klip. Kromě chytlavýho featu od MukLa se změnily i vibes. Narozdíl od 'Kde Seš' byl tenhle song trochu povzbudivější.
+                            Na jaře se yurkur vrátil s trackem 'Level Up', ke kterému natočili pestrý klip. Kromě
+                            chytlavého featu od MukLa se na rozdíl od 'Kde Seš' změnila i atmosféra. Tento song je o
+                            poznání
+                            povzbudivější.
                         </p>
                     </div>
                 </article>
@@ -382,20 +851,19 @@
                     <header class="item-head">
                         <div class="timeline-line-vert"></div>
                         <p class="item-title">Nenávist</p>
-                        <p class="item-meta">Datum vydání: 2.duben 2023</p>
+                        <p class="item-meta">Datum vydání: 2. dubna 2023</p>
                     </header>
                     <div class="video-card">
                         <div class="video-frame">
-                            <iframe
-                                src="https://www.youtube-nocookie.com/embed/jfnIk6m7A08"
-                                title="YouTube - Nenávist"
+                            <iframe src="https://www.youtube-nocookie.com/embed/jfnIk6m7A08" title="YouTube - Nenávist"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen></iframe>
                         </div>
                     </div>
                     <div class="item-body">
                         <p>
-                            Novej song 'Nenávist' MukL poslal jako nominaci do prvního ročníku hip-hop talent show THE MAG Wrap. O pár dní později vydal yurkur další sólo track s názvem 'Sám'.
+                            Nový song 'Nenávist' MukL poslal do prvního ročníku hip-hop talent show THE
+                            MAG Wrap jako nominaci. O pár dní později vydal yurkur další sólo track s názvem 'Sám'.
                         </p>
                     </div>
                 </article>
@@ -403,13 +871,11 @@
                     <header class="item-head">
                         <div class="timeline-line-vert"></div>
                         <p class="item-title">Sám</p>
-                        <p class="item-meta">Datum vydání: 7.duben 2023</p>
+                        <p class="item-meta">Datum vydání: 7. dubna 2023</p>
                     </header>
                     <div class="video-card">
                         <div class="video-frame">
-                            <iframe
-                                src="https://www.youtube-nocookie.com/embed/vHoxPTF-978"
-                                title="YouTube - Sám"
+                            <iframe src="https://www.youtube-nocookie.com/embed/vHoxPTF-978" title="YouTube - Sám"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen></iframe>
                         </div>
@@ -419,20 +885,23 @@
                     <header class="item-head">
                         <div class="timeline-line-vert"></div>
                         <p class="item-title">pavučina EP</p>
-                        <p class="item-meta">Datum vydání: 15.červenec 2023</p>
+                        <p class="item-meta">Datum vydání: 15. července 2023</p>
                     </header>
                     <div class="video-card">
                         <div class="video-frame">
-                            <iframe
-                                src="https://www.youtube-nocookie.com/embed/-hKpXuU4DmA"
-                                title="YouTube - Sám"
+                            <iframe src="https://www.youtube-nocookie.com/embed/-hKpXuU4DmA" title="YouTube - Sám"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen></iframe>
                         </div>
                     </div>
                     <div class="item-body">
                         <p>
-                            Yurkur během května a června vyráběl několik beatů denně. Nabitej věcma který chtěl říct, začal sestavovat krátký EP. Pojmenoval ho 'pavučina' - 5 krátkejch tracků s happy zvukem ale toxickejma textama. Song, kterej vyniká, je určitě tanečně směřovanej '2021', kde MukL přispěl slokou. Celý EP si můžeš poslechnout <a href="https://open.spotify.com/album/3XCfQfTPiYkBlEadQGvaj4" target="_blank" rel="noopener noreferrer" class="timeline-link">tady.</a>
+                            Yurkur během května a června vyráběl několik beatů denně. Nabitý věcmi, které chtěl říct,
+                            začal sestavovat kratké EP. Pojmenoval ho 'pavučina' - 5 krátkých tracků s veselým zvukem
+                            ,ale toxickými texty. Song který vyniká je určitě tanečně laděný '2021', kde MukL
+                            přispěl slokou. Celé EP si můžeš poslechnout <a
+                                href="https://open.spotify.com/album/3XCfQfTPiYkBlEadQGvaj4" target="_blank"
+                                rel="noopener noreferrer" class="timeline-link">tady.</a>
                         </p>
                     </div>
                 </article>
@@ -442,12 +911,11 @@
                         <p class="page-subtitle">2024</p>
                         <div class="timeline-line-vert"></div>
                         <p class="item-title">Stín (feat. yurkur)</p>
-                        <p class="item-meta">Datum vydání: 26.leden 2024</p>
+                        <p class="item-meta">Datum vydání: 26. ledna 2024</p>
                     </header>
                     <div class="video-card">
                         <div class="video-frame">
-                            <iframe
-                                src="https://www.youtube-nocookie.com/embed/lj8iTnZmVb4"
+                            <iframe src="https://www.youtube-nocookie.com/embed/lj8iTnZmVb4"
                                 title="YouTube - Stín (feat. yurkur)"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen></iframe>
@@ -455,7 +923,10 @@
                     </div>
                     <div class="item-body">
                         <p>
-                            'Stín', kterej vyšel v lednu s yurkurem na featu, byl první track, kde si kluci nechali udělat klip od někoho zvenčí - av4la se postaral o vizuál. Taky jde o první pokus vícero fází písničky a beat-switche.
+                            V roce 2024 se tempo vydávání podstatně zpomalilo. 'Stín', který vyšel v lednu s yurkurem
+                            na featu, byl první track, ke kterému si kluci nechali udělat klip od někoho zvenčí - av4la
+                            se
+                            postaral o vizuál. Taky jde o první pokus s vícero fázemi písničky a změnou beatu.
                         </p>
                     </div>
                 </article>
@@ -463,14 +934,16 @@
                     <header class="item-head">
                         <div class="timeline-line-vert"></div>
                         <p class="item-title">První show - KRAP 4</p>
-                        <p class="item-meta">Datum: 13.duben 2024</p>
+                        <p class="item-meta">Datum: 13. dubna 2024</p>
                     </header>
                     <section class="show-poster">
                         <img src="krap4_poster.webp" alt="show poster" loading="lazy" decoding="async">
                     </section>
                     <div class="item-body">
                         <p>
-                            Konečně se naskytla příležitost zahrát před lidma - Krkonošské Rapobraní 4 v rodným městě, kde MukL s yurkurem hráli jako předskokani legendě James Coleovi, kterej měl zastávku ve Vrchlabí na svojí Down4Life Tour.
+                            Konečně se naskytla příležitost zahrát před lidmi - Krkonošské Rapobraní 4 v rodném městě,
+                            kde MukL s yurkurem hráli jako předskokani legendy Jamese Colea, který měl zastávku ve
+                            Vrchlabí na svojí Down4Life Tour.
                         </p>
                     </div>
                 </article>
@@ -478,13 +951,11 @@
                     <header class="item-head">
                         <div class="timeline-line-vert"></div>
                         <p class="item-title">Bronx</p>
-                        <p class="item-meta">Datum vydání: 28.červen 2024</p>
+                        <p class="item-meta">Datum vydání: 28. července 2024</p>
                     </header>
                     <div class="video-card">
                         <div class="video-frame">
-                            <iframe
-                                src="https://www.youtube-nocookie.com/embed/-Na_P95rBgc"
-                                title="YouTube - Bronx"
+                            <iframe src="https://www.youtube-nocookie.com/embed/-Na_P95rBgc" title="YouTube - Bronx"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen></iframe>
                         </div>
@@ -496,20 +967,22 @@
                         <p class="page-subtitle">2025</p>
                         <div class="timeline-line-vert"></div>
                         <p class="item-title">Message</p>
-                        <p class="item-meta">Datum vydání: 31.leden 2025</p>
+                        <p class="item-meta">Datum vydání: 31. ledna 2025</p>
                     </header>
                     <div class="video-card">
                         <div class="video-frame">
-                            <iframe
-                                src="https://www.youtube-nocookie.com/embed/wEMNCGggUcs"
-                                title="YouTube - Message"
+                            <iframe src="https://www.youtube-nocookie.com/embed/wEMNCGggUcs" title="YouTube - Message"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen></iframe>
                         </div>
                     </div>
                     <div class="item-body">
                         <p>
-                            MukL se chtěl ubrat procítěnějším směrem. V lednu vydal rychlej klip k tracku 'Message', kde zkusil zpívanější melodický flows o heartbreaku. Yurkur vydal 'hardware' na konci září - DnB banger s příchutí 90s jungle.
+                            MukL se chtěl ubírat procítěnějším směrem. V lednu vydal narychlo natočený klip k tracku
+                            'Message', ve kterém
+                            zkusil zpívanější melodické flows o zlomeném srdci. Yurkur vydal 'hardware' na konci září -
+                            DnB
+                            song s prvky jungle z devadesátých let.
                         </p>
                     </div>
                 </article>
@@ -517,13 +990,11 @@
                     <header class="item-head">
                         <div class="timeline-line-vert"></div>
                         <p class="item-title">hardware</p>
-                        <p class="item-meta">Datum vydání: 24.září 2025</p>
+                        <p class="item-meta">Datum vydání: 24. září 2025</p>
                     </header>
                     <div class="video-card">
                         <div class="video-frame">
-                            <iframe
-                                src="https://www.youtube-nocookie.com/embed/yDK_1ZYqtqQ"
-                                title="YouTube - hardware"
+                            <iframe src="https://www.youtube-nocookie.com/embed/yDK_1ZYqtqQ" title="YouTube - hardware"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen></iframe>
                         </div>
@@ -533,12 +1004,11 @@
                     <header class="item-head">
                         <div class="timeline-line-vert"></div>
                         <p class="item-title">Blessed (feat. yurkur)</p>
-                        <p class="item-meta">Datum vydání: 8.říjen 2025</p>
+                        <p class="item-meta">Datum vydání: 8. října 2025</p>
                     </header>
                     <div class="video-card">
                         <div class="video-frame">
-                            <iframe
-                                src="https://www.youtube-nocookie.com/embed/JcmAiXPeugo"
+                            <iframe src="https://www.youtube-nocookie.com/embed/JcmAiXPeugo"
                                 title="YouTube - Blessed (feat. yurkur)"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen></iframe>
@@ -546,7 +1016,8 @@
                     </div>
                     <div class="item-body">
                         <p>
-                            Říjen 2025 přinesl temnej track 'Blessed', kterej chvíli ležel v archivu. Instrumentálově se podobá Yeatově tvorbě: kolaborace yurkura a leona. Vizuál je poskládanej ze záběrů původně natočenejch v roce 2024.
+                            Říjen 2025 přinesl temný track 'Blessed', který chvíli ležel v archivu. Instrumentálově se
+                            podobá Yeatově tvorbě a vizuál je poskládaný ze starších záběrů.
                         </p>
                     </div>
                 </article>
@@ -554,12 +1025,11 @@
                     <header class="item-head">
                         <div class="timeline-line-vert"></div>
                         <p class="item-title">Lost In The Glow</p>
-                        <p class="item-meta">Datum vydání: 12.prosinec 2025</p>
+                        <p class="item-meta">Datum vydání: 12. prosince 2025</p>
                     </header>
                     <div class="video-card">
                         <div class="video-frame">
-                            <iframe
-                                src="https://www.youtube-nocookie.com/embed/aAx9fcvMFV4"
+                            <iframe src="https://www.youtube-nocookie.com/embed/aAx9fcvMFV4"
                                 title="YouTube - Lost In The Glow"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen></iframe>
@@ -567,22 +1037,123 @@
                     </div>
                     <div class="item-body">
                         <p>
-                            Ke konci roku MukL vyhodil ještě jeden song - 'Lost In The Glow'. První anglickej track s hodně chill atmosférou a heartbreak lyrics.
+                            Ke konci roku MukL vydal ještě jeden song - 'Lost In The Glow'. První track v angličtině s
+                            velmi klidnou atmosférou a heartbreak textem.
                         </p>
                     </div>
                 </article>
                 <div class="timeline-line-hor"></div>
-            </section>
-        </main>
-
-        <footer class="footer">
-            <div class="container footer-inner">
-                <img src="logo_footer.webp" alt="existence Logo Footer">
             </div>
-        </footer>
-    
-        <script>
+        </section>
 
+        <section class="news" id="news">
+            <h1 class="page-title">Přihlaš se k odběru oznámení nejnovějších releasů</h1>
+            <div class="sib-form" style="text-align: center; background-color: #232323;">
+                <div id="sib-form-container" class="sib-form-container">
+                    <div id="error-message" class="sib-form-message-panel"
+                        style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;max-width:540px;">
+                        <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+                            <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
+                                <path
+                                    d="M256 40c118.621 0 216 96.075 216 216 0 119.291-96.61 216-216 216-119.244 0-216-96.562-216-216 0-119.203 96.602-216 216-216m0-32C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm-11.49 120h22.979c6.823 0 12.274 5.682 11.99 12.5l-7 168c-.268 6.428-5.556 11.5-11.99 11.5h-8.979c-6.433 0-11.722-5.073-11.99-11.5l-7-168c-.283-6.818 5.167-12.5 11.99-12.5zM256 340c-15.464 0-28 12.536-28 28s12.536 28 28 28 28-12.536 28-28-12.536-28-28-28z" />
+                            </svg>
+                            <span class="sib-form-message-panel__inner-text">
+                                Tvůj odběr nebyl zpracován.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+
+                </div>
+                <div id="success-message" class="sib-form-message-panel"
+                    style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#085229; background-color:#e7faf0; border-radius:3px; border-color:#13ce66;max-width:540px;">
+                    <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+                        <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
+                            <path
+                                d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 464c-118.664 0-216-96.055-216-216 0-118.663 96.055-216 216-216 118.664 0 216 96.055 216 216 0 118.663-96.055 216-216 216zm141.63-274.961L217.15 376.071c-4.705 4.667-12.303 4.637-16.97-.068l-85.878-86.572c-4.667-4.705-4.637-12.303.068-16.97l8.52-8.451c4.705-4.667 12.303-4.637 16.97.068l68.976 69.533 163.441-162.13c4.705-4.667 12.303-4.637 16.97.068l8.451 8.52c4.668 4.705 4.637 12.303-.068 16.97z" />
+                        </svg>
+                        <span class="sib-form-message-panel__inner-text">
+                            Hotovo! Teď ti přijde mail, pokaždé když vyjde nový track. Díky.
+                        </span>
+                    </div>
+                </div>
+                <div>
+
+                </div>
+                <div id="sib-container" class="sib-container--large sib-container--vertical"
+                    style="text-align:center; background-color:rgba(255,255,255,1); max-width:540px; border-radius:20px; border-width:1px; border-color:#C0CCD9; border-style:solid; direction:ltr">
+                    <form id="sib-form" method="POST"
+                        action="https://b0f1e399.sibforms.com/serve/MUIFAL6gWBuNWe9ZwHlAw3NiSud6DCL3F2VBiatwslmvriLHqZWe8B_wHrTZfYDYZ3uChJilC3Bui2PudCs90AgrtfoeP4Ve3EInN-dcuL6wTvavEWcUkATBZ0KxN7FXJh6gm7pqouaFGe9xWzrauId5SOSagt__wmjG0fOSeZBJucE5Q4eakGP3Xhj36G1-J5ndXYx0vgB1IxAbtQ=="
+                        data-type="subscription">
+                        <div style="padding: 8px 0;">
+                            <div class="sib-form-block"
+                                style="font-size:32px; text-align:left; font-weight:700; font-family:Helvetica, sans-serif; color:#3C4858; background-color:transparent; text-align:left">
+                                <p>XST Newsletter</p>
+                            </div>
+                        </div>
+                        <div style="padding: 8px 0;">
+                            <div class="sib-form-block"
+                                style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#3C4858; background-color:transparent; text-align:left">
+                                <div class="sib-text-form-block">
+                                    <p>Nespamujeme blbosti. Budeš dostávat upozornění jen na nové songy a videoklipy.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="padding: 8px 0;">
+                            <div class="sib-input sib-form-block">
+                                <div class="form__entry entry_block">
+                                    <div class="form__label-row ">
+                                        <label class="entry__label"
+                                            style="font-weight: 700; text-align:left; font-size:16px; text-align:left; font-weight:700; font-family:Helvetica, sans-serif; color:#3c4858;"
+                                            for="EMAIL" data-required="*">Zadej svůj mail k odběru novinek.</label>
+                                        <div class="entry__field">
+                                            <input class="input " type="text" id="EMAIL" name="EMAIL" autocomplete="off"
+                                                placeholder="Tvůj mail zde" data-required="true" required />
+                                        </div>
+                                    </div>
+                                    <label class="entry__error entry__error--primary"
+                                        style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;">
+                                    </label>
+                                    <label class="entry__specification"
+                                        style="font-size:12px; text-align:left; font-family:Helvetica, sans-serif; color:#8390A4; text-align:left">
+                                        Ve formátu abc@xyz.com
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="padding: 8px 0;">
+                            <div class="sib-form-block" style="text-align: left">
+                                <button class="sib-form-block__button sib-form-block__button-with-loader"
+                                    style="font-size:16px; text-align:left; font-weight:700; font-family:Helvetica, sans-serif; color:#FFFFFF; background-color:#232323; border-radius:20px; border-width:0px;"
+                                    form="sib-form" type="submit">
+                                    <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon"
+                                        viewBox="0 0 512 512">
+                                        <path
+                                            d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
+                                    </svg>
+                                    PŘIHLÁSIT SE K ODBĚRU
+                                </button>
+                            </div>
+                        </div>
+
+                        <input type="text" name="email_address_check" value="" class="input--hidden">
+                        <input type="hidden" name="locale" value="en">
+                    </form>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <img src="logo_footer.webp" alt="existence Logo Footer">
+        </div>
+    </footer>
+
+    <script>
         (function () {
             const btn = document.querySelector('.nav-toggle');
             const nav = document.getElementById('site-nav');
@@ -643,7 +1214,7 @@
             }
 
             const items = ytFrames.map((iframe) => ({ iframe, load: setupLazyYouTube(iframe) }))
-                                  .filter((x) => typeof x.load === 'function');
+                .filter((x) => typeof x.load === 'function');
 
             if ('IntersectionObserver' in window) {
                 const io = new IntersectionObserver((entries, obs) => {
@@ -665,6 +1236,7 @@
 
             function closeMenu() {
                 nav.classList.remove('open');
+                btn.classList.remove('open');
                 btn.setAttribute('aria-expanded', 'false');
             }
 
@@ -674,8 +1246,24 @@
                 btn.setAttribute('aria-expanded', String(isOpen));
             });
 
-            nav.querySelectorAll('a').forEach(a => {
-                a.addEventListener('click', closeMenu);
+            nav.querySelectorAll('a[href^="#"]').forEach(link => {
+                link.addEventListener('click', event => {
+                    const target = document.getElementById(
+                        link.getAttribute('href').slice(1)
+                    );
+
+                    if (!target) return;
+
+                    event.preventDefault();
+                    closeMenu();
+
+                    target.scrollIntoView({
+                        behavior: window.matchMedia(
+                            '(prefers-reduced-motion: reduce)'
+                        ).matches ? 'instant' : 'smooth',
+                        block: 'start'
+                    });
+                });
             });
 
             document.addEventListener('keydown', (e) => {
@@ -683,6 +1271,145 @@
             });
         })();
 
-        </script>
-    </body>
+        const releases = document.querySelectorAll('.discography-item');
+
+        const modal = document.getElementById('releaseModal');
+        const titleEl = modal.querySelector('.modal-title');
+        const coverEl = modal.querySelector('.modal-cover');
+        const artistEl = modal.querySelector('.modal-artist');
+        const linksEl = modal.querySelector('.modal-links');
+        const closeBtn = modal.querySelector('.modal-close');
+
+        const services = [
+            { key: 'spotify', label: 'Spotify', icon: '' },
+            { key: 'apple', label: 'Apple Music', icon: '' },
+            { key: 'youtube', label: 'YouTube', icon: '' },
+            { key: 'soundcloud', label: 'SoundCloud', icon: '' }
+        ];
+
+        function openModal(item) {
+            titleEl.textContent = item.dataset.title || '';
+            artistEl.textContent = item.dataset.artist || '';
+            coverEl.src = item.dataset.cover || '';
+            coverEl.alt = item.dataset.title || '';
+
+            linksEl.innerHTML = '';
+
+            services.forEach(s => {
+                const url = item.dataset[s.key];
+                if (!url) return;
+
+                const a = document.createElement('a');
+                a.href = url;
+                a.target = '_blank';
+                a.rel = 'noopener';
+                a.className = 'modal-link';
+                a.innerHTML = `<span class="modal-link-icon">${s.icon}</span><span class="modal-link-text">${s.label}</span>`;
+
+                linksEl.appendChild(a);
+            });
+
+            modal.classList.add('active');
+            document.body.classList.add('modal-open');
+        }
+
+        function closeModal() {
+            modal.classList.remove('active');
+            document.body.classList.remove('modal-open');
+        }
+
+        releases.forEach(item => {
+            item.addEventListener('click', () => openModal(item));
+        });
+
+        closeBtn.addEventListener('click', closeModal);
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+        });
+
+        window.LOCALE = 'en';
+        window.REQUIRED_ERROR_MESSAGE = "Vyplň mailovou adresu.";
+        window.GENERIC_INVALID_MESSAGE = "Zadaná adresa je nesprávná nebo neexistuje.";
+        window.translation = {
+            common: {
+                selectedList: '{quantity} list selected',
+                selectedLists: '{quantity} lists selected',
+                selectedOption: '{quantity} selected',
+                selectedOptions: '{quantity} selected',
+            }
+        };
+
+        var AUTOHIDE = Boolean(0);
+
+        (function () {
+            const links = [...document.querySelectorAll('#site-nav a[href^="#"]')];
+
+            const items = links
+                .map(link => ({
+                    link,
+                    section: document.getElementById(
+                        link.getAttribute('href').slice(1)
+                    )
+                }))
+                .filter(item => item.section);
+
+            function updateActiveSection() {
+                const header = document.querySelector('.header');
+                const boundary = (header?.getBoundingClientRect().bottom || 0) + 40;
+
+                let active = null;
+
+                // Aktivní je poslední sekce, která dosáhla prostoru pod hlavičkou.
+                for (const item of items) {
+                    if (item.section.getBoundingClientRect().top <= boundary) {
+                        active = item;
+                    }
+                }
+
+                // Poslední sekce může být příliš krátká, aby dosáhla hlavičky.
+                const atBottom =
+                    window.scrollY + window.innerHeight >=
+                    document.documentElement.scrollHeight - 2;
+
+                if (atBottom && items.length) {
+                    active = items[items.length - 1];
+                }
+
+                for (const item of items) {
+                    if (item === active) {
+                        item.link.setAttribute('aria-current', 'location');
+                    } else {
+                        item.link.removeAttribute('aria-current');
+                    }
+                }
+            }
+
+            let scheduled = false;
+
+            window.addEventListener('scroll', () => {
+                if (scheduled) return;
+                scheduled = true;
+
+                requestAnimationFrame(() => {
+                    updateActiveSection();
+                    scheduled = false;
+                });
+            }, { passive: true });
+
+            window.addEventListener('resize', updateActiveSection);
+            window.addEventListener('load', updateActiveSection);
+
+            updateActiveSection();
+        })();
+    </script>
+
+    <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+
+</body>
+
 </html>
