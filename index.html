@@ -113,7 +113,7 @@
                     </header>
                     <div class="video-card">
                         <div class="video-frame">
-                            <iframe src="https://www.youtube-nocookie.com/embed/aAx9fcvMFV4"
+                            <iframe id="latest-video" src="https://www.youtube-nocookie.com/embed/aAx9fcvMFV4"
                                 title="YouTube - Lost In The Glow"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen></iframe>
@@ -298,8 +298,8 @@
 
                         <div class="discography-item" data-title="SRT Demon" data-artist="yurkur"
                             data-date="11. března 2022" data-cover="srt_demon_cover.webp"
-                            data-spotify="https://open.spotify.com/album/2EBXotUjYO0VMI8O9knBg9"
-                            data-apple="https://music.apple.com/cz/album/srt-demon-single/1612911996"
+                            data-spotify="https://open.spotify.com/album/32O5X3f5E8Q9Rsl1U5hmQQ"
+                            data-apple="https://music.apple.com/us/album/srt-demon-single/6818761719"
                             data-youtube="https://www.youtube.com/watch?v=J2vuhFwgQq4"
                             data-soundcloud="https://soundcloud.com/xstyurkur/srt-demon">
                             <img src="srt_demon_cover.webp" alt="yurkur - SRT Demon">
@@ -315,8 +315,6 @@
 
                         <div class="discography-item" data-title="Za Pár Let" data-artist="yurkur"
                             data-date="1. července 2021" data-cover="zpl_cover.webp"
-                            data-spotify="https://open.spotify.com/album/5RVGO6DXDY4j3yZd9zBFjY"
-                            data-apple="https://music.apple.com/cz/album/za-pár-let-single/1574280277"
                             data-youtube="https://www.youtube.com/watch?v=eSnLwrxPBq4"
                             data-soundcloud="https://soundcloud.com/xstyurkur/za-par-let">
                             <img src="zpl_cover.webp" alt="yurkur - Za Pár Let">
@@ -332,8 +330,8 @@
 
                         <div class="discography-item" data-title="Nízko!" data-artist="yurkur (feat. MukL)"
                             data-date="1. května 2021" data-cover="nizko_cover.webp"
-                            data-spotify="https://open.spotify.com/album/0mkZMzjLKRglZA0H1fx5KH"
-                            data-apple="https://music.apple.com/cz/album/nízko-feat-mukl-single/1567753434"
+                            data-spotify="https://open.spotify.com/album/06VtbY0JfvIY9ZK4FrCcQz"
+                            data-apple="https://music.apple.com/us/album/nízko-feat-mukl/6818383355"
                             data-youtube="https://www.youtube.com/watch?v=bNyfRtZnX8Y"
                             data-soundcloud="https://soundcloud.com/xstyurkur/nizko-feat-mukl">
                             <img src="nizko_cover.webp" alt="yurkur - Nízko! (feat. MukL)">
@@ -402,6 +400,12 @@
                     </h1>
 
                     <div class="discography-grid grid-small">
+                        <div class="discography-item" data-title="PRESSURE" data-artist="yurkur" data-date=""
+                            data-cover="pressure_cover.webp" data-spotify="" data-apple="" data-youtube=""
+                            data-soundcloud="https://soundcloud.com/xstyurkur/sets/pressure">
+                            <img src="pressure_cover.webp" alt="yurkur - PRESSURE">
+                        </div>
+
                         <div class="discography-item" data-title="BLEEDING" data-artist="yurkur" data-date=""
                             data-cover="bleeding_cover.webp" data-spotify="" data-apple="" data-youtube=""
                             data-soundcloud="https://soundcloud.com/xstyurkur/sets/bleeding">
@@ -1160,7 +1164,7 @@
             if (!btn || !nav) return;
 
             // Lazy-load YouTube iframes only when needed (viewport/click)
-            const ytFrames = Array.from(document.querySelectorAll('.video-frame iframe'));
+            const ytFrames = Array.from(document.querySelectorAll('.video-frame iframe:not(#latest-video)'));
 
             function extractYouTubeId(url) {
                 try {
@@ -1212,6 +1216,154 @@
 
                 return load;
             }
+
+            const YOUTUBE_API_KEY = 'AIzaSyDL7tOrLnLiG6vi1lUev7NCbnIlQcNlnAs';
+            const YOUTUBE_HANDLE = '@existencebtw';
+            const EXCLUDED_VIDEO_IDS = new Set([
+                // 'ID_FIRST_SHORTU',
+                // 'ID_SECOND_SHORTU'
+            ]);
+
+            // Změna seznamu výjimek automaticky vytvoří novou cache.
+            const LATEST_CACHE_KEY =
+                'youtube-latest-v2:' +
+                YOUTUBE_HANDLE + ':' +
+                [...EXCLUDED_VIDEO_IDS].sort().join(',');
+
+            const LATEST_CACHE_TTL = 60 * 60 * 1000;
+
+            async function youtubeRequest(endpoint, params) {
+                const url = new URL('https://www.googleapis.com/youtube/v3/' + endpoint);
+                url.search = new URLSearchParams({ ...params, key: YOUTUBE_API_KEY });
+                const controller = new AbortController();
+                const timer = setTimeout(() => controller.abort(), 8000);
+                try {
+                    const response = await fetch(url, { signal: controller.signal });
+                    if (!response.ok) throw new Error('YouTube API: HTTP ' + response.status);
+                    return await response.json();
+                } finally {
+                    clearTimeout(timer);
+                }
+            }
+
+            function applyLatestVideo(video) {
+                if (!video || !/^[a-zA-Z0-9_-]{11}$/.test(video.id) ||
+                    typeof video.title !== 'string' || !Number.isFinite(Date.parse(video.publishedAt))) {
+                    throw new Error('Neplatná data videa');
+                }
+                const article = document.querySelector('#home .timeline-item');
+                article.querySelector('.item-title').textContent = video.title;
+                article.querySelector('.item-meta').textContent = 'Datum vydání: ' +
+                    new Intl.DateTimeFormat('cs-CZ', {
+                        day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Europe/Prague'
+                    }).format(new Date(video.publishedAt));
+                const iframe = document.getElementById('latest-video');
+                iframe.setAttribute('src', 'https://www.youtube-nocookie.com/embed/' + video.id);
+                iframe.setAttribute('title', 'YouTube - ' + video.title);
+            }
+
+            async function updateLatestVideo() {
+                let cached = null;
+                try {
+                    cached = JSON.parse(localStorage.getItem(LATEST_CACHE_KEY));
+                    if (cached) applyLatestVideo(cached.video);
+                    if (cached && Date.now() - cached.savedAt >= 0 &&
+                        Date.now() - cached.savedAt < LATEST_CACHE_TTL) return;
+                } catch (_) {
+                    cached = null;
+                }
+                if (!YOUTUBE_API_KEY || YOUTUBE_API_KEY === 'VLOZ_SEM_API_KLIC') {
+                    console.info('Nejnovější video: doplň YOUTUBE_API_KEY. Zobrazuje se záložní video.');
+                    return;
+                }
+                try {
+                    const channel = await youtubeRequest('channels', {
+                        part: 'id', forHandle: YOUTUBE_HANDLE
+                    });
+                    const channelId = channel.items?.[0]?.id;
+                    if (!channelId) throw new Error('YouTube kanál nenalezen');
+                    let selectedVideo = null;
+                    let pageToken = '';
+
+                    do {
+                        const params = {
+                            part: 'snippet',
+                            channelId,
+                            type: 'video',
+                            order: 'date',
+                            videoEmbeddable: 'true',
+                            maxResults: '50'
+                        };
+
+                        if (pageToken) params.pageToken = pageToken;
+
+                        const result = await youtubeRequest('search', params);
+
+                        const ids = (result.items || [])
+                            .map(item => item.id?.videoId)
+                            .filter(id => id && !EXCLUDED_VIDEO_IDS.has(id));
+
+                        if (ids.length) {
+                            const details = await youtubeRequest('videos', {
+                                part: 'snippet,status,liveStreamingDetails',
+                                id: ids.join(',')
+                            });
+
+                            const eligibleVideos = (details.items || [])
+                                .filter(item =>
+                                    !EXCLUDED_VIDEO_IDS.has(item.id) &&
+                                    !item.liveStreamingDetails &&
+                                    item.snippet?.liveBroadcastContent === 'none' &&
+                                    item.status?.privacyStatus === 'public' &&
+                                    item.status?.embeddable === true &&
+                                    Date.parse(item.snippet.publishedAt) <= Date.now()
+                                )
+                                .sort((a, b) =>
+                                    Date.parse(b.snippet.publishedAt) -
+                                    Date.parse(a.snippet.publishedAt)
+                                );
+
+                            selectedVideo = eligibleVideos[0] || null;
+                        }
+
+                        pageToken = result.nextPageToken || '';
+                    } while (!selectedVideo && pageToken);
+
+                    if (!selectedVideo) {
+                        throw new Error('Žádné vhodné video nebylo nalezeno');
+                    }
+
+                    const video = {
+                        id: selectedVideo.id,
+                        title: selectedVideo.snippet.title,
+                        publishedAt: selectedVideo.snippet.publishedAt
+                    };
+                    applyLatestVideo(video);
+                    try {
+                        localStorage.setItem(LATEST_CACHE_KEY, JSON.stringify({ video, savedAt: Date.now() }));
+                    } catch (_) { /* Web funguje i při zakázaném úložišti. */ }
+                } catch (error) {
+                    console.warn('Nejnovější video se nepodařilo načíst. Zůstává záložní video.', error.message);
+                }
+            }
+
+            // Lazy-load spusť až po aktualizaci, aby náhled i přehrávač patřily stejnému videu.
+            updateLatestVideo().finally(() => {
+                const iframe = document.getElementById('latest-video');
+                const load = setupLazyYouTube(iframe);
+                if (!load) return;
+                if ('IntersectionObserver' in window) {
+                    const observer = new IntersectionObserver((entries) => {
+                        if (entries.some(entry => entry.isIntersecting)) {
+                            load();
+                            observer.disconnect();
+                        }
+                    }, { rootMargin: '200px 0px', threshold: 0.01 });
+                    observer.observe(iframe);
+                } else {
+                    load();
+                }
+            });
 
             const items = ytFrames.map((iframe) => ({ iframe, load: setupLazyYouTube(iframe) }))
                 .filter((x) => typeof x.load === 'function');
